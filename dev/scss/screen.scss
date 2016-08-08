@@ -17,10 +17,11 @@
 
 $brand-primary: #e24412;
 $brand-secondary: #1f2d3e;
-$brand-subtle: lighten(black, 60%);
+$brand-subtle: lighten(black, 75%);
 
 .color-primary { color: $brand-primary; }
 .color-secondary { color: $brand-secondary; }
+.color-subtle { color: $brand-subtle; }
 
 /**
  * Reset and dependencies
@@ -99,15 +100,41 @@ img {
 	list-style: none;
 	padding: 0;
 }
+
 .themen__meta {
 	color: $brand-subtle;
+}
+
+.calendar {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 26em;
+
+	th {
+		text-align: center;
+	}
+
+	&.calendar td {
+		line-height: 30px;
+		padding: 4px;
+	}
+}
+
+.eventday {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	color: white;
+	background-color: $brand-secondary;
+	border-radius: 30px;
+	cursor: pointer;
 }
 
 /**
  * Components w/ JavaScript
  */
 // @import 'bootstrap/modals';
-// @import 'bootstrap/tooltip';
+@import 'bootstrap/tooltip';
 // @import 'bootstrap/popovers';
 // @import 'bootstrap/carousel';
 @import 'CSS:flipclock/compiled/flipclock';

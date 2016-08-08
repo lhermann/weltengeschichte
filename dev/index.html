@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-center">Kalender</h2>
-                    <table class="table table-bordered text-center">
+                    <table id="calendar" class="calendar table table-bordered text-center">
                         <thead>
                             <tr>
                                 <th>So</th>
@@ -88,23 +88,74 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>18</td>
-                                <td>19</td>
-                                <td>20</td>
-                                <td>21</td>
-                                <td>22</td>
-                                <td>23</td>
-                                <td>24</td>
+                            <tr class="active">
+                                <td colspan="7">August 2016</td>
                             </tr>
                             <tr>
-                                <td>25</td>
-                                <td>26</td>
-                                <td>27</td>
-                                <td>28</td>
-                                <td>29</td>
-                                <td>30</td>
-                                <td>1</td>
+                                <td class="color-subtle">...</td>
+                                <td id="9/19" class="color-subtle">19</td>
+                                <td id="9/20" class="color-subtle">20</td>
+                                <td id="9/21" class="color-subtle">21</td>
+                                <td id="9/22" class="color-subtle">22</td>
+                                <td id="9/23"><span class="eventday">23</span></td>
+                                <td id="9/24"><span class="eventday">24</span></td>
+                            </tr>
+                            <tr>
+                                <td id="9/25">25</td>
+                                <td id="9/26">26</td>
+                                <td id="9/27">27</td>
+                                <td id="9/28">28</td>
+                                <td id="9/29">29</td>
+                                <td id="9/30">30</td>
+                                <td class="active"></td>
+                            </tr>
+                            <tr class="active">
+                                <td colspan="7">Oktober 2016</td>
+                            </tr>
+                            <tr>
+                                <td class="active"></td>
+                                <td class="active"></td>
+                                <td class="active"></td>
+                                <td class="active"></td>
+                                <td class="active"></td>
+                                <td class="active"></td>
+                                <td id="10/1">1</td>
+                            </tr>
+                            <tr>
+                                <td id="10/2">2</td>
+                                <td id="10/3">3</td>
+                                <td id="10/4">4</td>
+                                <td id="10/5">5</td>
+                                <td id="10/6">6</td>
+                                <td id="10/7">7</td>
+                                <td id="10/8">8</td>
+                            </tr>
+                            <tr>
+                                <td id="10/9">9</td>
+                                <td id="10/10">10</td>
+                                <td id="10/11">11</td>
+                                <td id="10/12">12</td>
+                                <td id="10/13">13</td>
+                                <td id="10/14">14</td>
+                                <td id="10/15">15</td>
+                            </tr>
+                            <tr>
+                                <td id="10/16">16</td>
+                                <td id="10/17">17</td>
+                                <td id="10/18">18</td>
+                                <td id="10/19">19</td>
+                                <td id="10/20">20</td>
+                                <td id="10/21">21</td>
+                                <td id="10/22">22</td>
+                            </tr>
+                            <tr>
+                                <td id="10/23" class="color-subtle">23</td>
+                                <td id="10/24" class="color-subtle">24</td>
+                                <td id="10/25" class="color-subtle">25</td>
+                                <td id="10/26" class="color-subtle">26</td>
+                                <td id="10/27" class="color-subtle">27</td>
+                                <td id="10/28" class="color-subtle">28</td>
+                                <td class="color-subtle">...</td>
                             </tr>
                         </tbody>
                     </table>
@@ -116,11 +167,13 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
 
         <!-- build:js js/weltengeschichte.min.js -->
         <script src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
         <script src="../node_modules/flipclock/compiled/flipclock.js"></script>
+        <script src="js/eventsobject.js"></script>
         <script src="js/script.js"></script>
         <!-- endbuild -->
     </body>

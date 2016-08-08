@@ -20,6 +20,11 @@
   color: #1f2d3e;
 }
 
+/* line 24, ../scss/screen.scss */
+.color-subtle {
+  color: #bfbfbf;
+}
+
 /**
  * Reset and dependencies
  */
@@ -3981,25 +3986,25 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
-/* line 43, ../scss/screen.scss */
+/* line 44, ../scss/screen.scss */
 body {
   padding: 2em 0;
 }
 
-/* line 47, ../scss/screen.scss */
+/* line 48, ../scss/screen.scss */
 h1,
 h2,
 h3 {
   font-family: "Times New Roman", Times, serif;
 }
 
-/* line 53, ../scss/screen.scss */
+/* line 54, ../scss/screen.scss */
 h1 {
   color: #e24412;
   text-transform: uppercase;
 }
 
-/* line 58, ../scss/screen.scss */
+/* line 59, ../scss/screen.scss */
 img {
   width: 100%;
 }
@@ -4007,31 +4012,192 @@ img {
 /**
  * Components
  */
-/* line 89, ../scss/screen.scss */
+/* line 90, ../scss/screen.scss */
 .logo {
   max-width: 260px;
   width: 100%;
 }
 
-/* line 94, ../scss/screen.scss */
+/* line 95, ../scss/screen.scss */
 .video-container {
   box-shadow: 0 0 20px #000;
 }
 
-/* line 98, ../scss/screen.scss */
+/* line 99, ../scss/screen.scss */
 .themen {
   list-style: none;
   padding: 0;
 }
 
-/* line 102, ../scss/screen.scss */
+/* line 104, ../scss/screen.scss */
 .themen__meta {
-  color: #999999;
+  color: #bfbfbf;
+}
+
+/* line 108, ../scss/screen.scss */
+.calendar {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 26em;
+}
+/* line 113, ../scss/screen.scss */
+.calendar th {
+  text-align: center;
+}
+/* line 117, ../scss/screen.scss */
+.calendar.calendar td {
+  line-height: 30px;
+  padding: 4px;
+}
+
+/* line 123, ../scss/screen.scss */
+.eventday {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: #1f2d3e;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 /**
  * Components w/ JavaScript
  */
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  font-size: 12px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+/* line 18, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+/* line 19, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+/* line 20, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+/* line 21, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+/* line 22, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+
+/* line 26, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+/* line 36, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* line 45, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+/* line 52, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+/* line 59, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+/* line 66, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000;
+}
+/* line 73, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000;
+}
+/* line 80, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+/* line 87, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+/* line 94, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+
 /* Get the bourbon mixin from http://bourbon.io */
 /* Reset */
 /* line 3, ../../node_modules/flipclock/compiled/flipclock.css */
@@ -4568,7 +4734,7 @@ img {
     opacity: 0;
   }
 }
-/* line 115, ../scss/screen.scss */
+/* line 142, ../scss/screen.scss */
 .countdown__inner {
   display: inline-block;
   width: auto;
