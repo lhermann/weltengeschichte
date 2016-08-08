@@ -1,0 +1,122 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ /*!
+  * Bootstrap v3.3.7 (http://getbootstrap.com)
+  * Copyright 2011-2016 Twitter, Inc.
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  */
+
+/**
+ * Core variables and mixins
+ */
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+$brand-primary: #e24412;
+$brand-secondary: #1f2d3e;
+$brand-subtle: lighten(black, 60%);
+
+.color-primary { color: $brand-primary; }
+.color-secondary { color: $brand-secondary; }
+
+/**
+ * Reset and dependencies
+ */
+@import 'bootstrap/normalize';
+$icon-font-path: 'fonts/';
+@import 'bootstrap/glyphicons';
+
+/**
+ * Core CSS
+ */
+@import 'bootstrap/scaffolding';
+@import 'bootstrap/type';
+// @import 'bootstrap/code';
+@import 'bootstrap/grid';
+@import 'bootstrap/tables';
+// @import 'bootstrap/forms';
+@import 'bootstrap/buttons';
+
+body {
+	padding: 2em 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+	color: $brand-primary;
+	text-transform: uppercase;
+}
+
+img {
+	width: 100%;
+}
+
+
+
+/**
+ * Components
+ */
+// @import 'bootstrap/component-animations';
+// @import 'bootstrap/dropdowns';
+// @import 'bootstrap/button-groups';
+// @import 'bootstrap/input-groups';
+// @import 'bootstrap/navs';
+// @import 'bootstrap/navbar';
+// @import 'bootstrap/breadcrumbs';
+// @import 'bootstrap/pagination';
+// @import 'bootstrap/pager';
+// @import 'bootstrap/labels';
+// @import 'bootstrap/badges';
+// @import 'bootstrap/jumbotron';
+// @import 'bootstrap/thumbnails';
+// @import 'bootstrap/alerts';
+// @import 'bootstrap/progress-bars';
+// @import 'bootstrap/media';
+// @import 'bootstrap/list-group';
+// @import 'bootstrap/panels';
+// @import 'bootstrap/responsive-embed';
+// @import 'bootstrap/wells';
+// @import 'bootstrap/close';
+
+.logo {
+	max-width: 260px;
+	width: 100%;
+}
+
+.video-container {
+	box-shadow: 0 0 20px #000;
+}
+
+.themen {
+	list-style: none;
+	padding: 0;
+}
+.themen__meta {
+	color: $brand-subtle;
+}
+
+/**
+ * Components w/ JavaScript
+ */
+// @import 'bootstrap/modals';
+// @import 'bootstrap/tooltip';
+// @import 'bootstrap/popovers';
+// @import 'bootstrap/carousel';
+@import 'CSS:flipclock/compiled/flipclock';
+
+.countdown__inner {
+	display: inline-block;
+	width: auto;
+}
+
+// Utility classes
+@import 'bootstrap/utilities';
+@import 'bootstrap/responsive-utilities';
