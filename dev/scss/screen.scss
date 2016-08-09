@@ -15,9 +15,10 @@
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 
-$brand-primary: #e24412;
-$brand-secondary: #1f2d3e;
-$brand-subtle: lighten(black, 75%);
+$brand-primary: 	#e24412;
+$brand-secondary: 	#1f2d3e;
+$brand-subtle: 		lighten(black, 75%);
+$shadow-color:			rgba(0, 0, 0, .3);
 
 .color-primary { color: $brand-primary; }
 .color-secondary { color: $brand-secondary; }
@@ -41,22 +42,12 @@ $icon-font-path: 'fonts/';
 // @import 'bootstrap/forms';
 @import 'bootstrap/buttons';
 
-body {
-	padding: 2em 0;
-}
-
-h1,
-h2 {
-	font-family: "Times New Roman", Times, serif;
-}
-
-h1 {
-	color: $brand-primary;
-	text-transform: uppercase;
-}
-
 img {
 	width: 100%;
+}
+
+.times {
+	font-family: "Times New Roman", Times, serif;
 }
 
 .lead-focus {
@@ -64,7 +55,52 @@ img {
 	font-weight: bold;
 }
 
+.cover {
+	background-image: url('../img/bg.jpg');
+	background-size: 50%;
+	box-shadow: 0 40px 40px -40px $shadow-color inset, 0 -40px 40px -40px $shadow-color inset;
+	padding: 1px 0;
 
+	.lead {
+		text-shadow: 0 1px 1px $shadow-color;
+	}
+}
+
+.main-header {
+	height: 80px;
+	margin-top: 2em;
+	text-align: left;
+}
+
+.main-header,
+.hero,
+.countdown,
+.live-episode {
+	margin-bottom: 4em;
+}
+
+.hero {
+	.hero__item {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.main-header {
+		text-align: center;
+	}
+
+	.hero,
+	.countdown,
+	.live-episode {
+		margin-bottom: 2.5em;
+	}
+
+	.hero h1 {
+		font-size: 2em;
+	}
+}
 
 /**
  * Components
@@ -93,9 +129,31 @@ $panel-primary-heading-bg:	$brand-primary;
 // @import 'bootstrap/wells';
 // @import 'bootstrap/close';
 
-.logo {
-	max-width: 260px;
-	width: 100%;
+.page-logo {
+	height: 100%;
+	width: auto;
+}
+
+.page-title {
+	color: $brand-primary;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 2em;
+	line-height: 80px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+	.page-logo {
+		display: inline;
+		margin-right: 1em;
+		vertical-align: -20px;
+	}
+
+	.page-title {
+		display: inline;
+		font-size: 3em;
+	}
 }
 
 .video-container {
@@ -151,9 +209,21 @@ $panel-primary-heading-bg:	$brand-primary;
 // @import 'bootstrap/carousel';
 @import 'CSS:flipclock/compiled/flipclock';
 
+.live-episode {
+	.episode {
+		font-size: 2.2em;
+	}
+}
+
+@media (max-width: 767px) {
+	.live-episode .episode {
+		font-size: 1.5em;
+	}
+}
+
 .countdown__inner {
 	display: inline-block;
-	margin: 2em 0 0;
+	margin: 3em 0 0;
 	width: auto;
 }
 
@@ -163,6 +233,7 @@ $panel-primary-heading-bg:	$brand-primary;
 		font-size: 1.5em;
 		left: 20px;
 		right: auto !important;
+		text-shadow: 0 1px 1px $shadow-color;
 		width: 140px;
 	}
 

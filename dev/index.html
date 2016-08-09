@@ -27,37 +27,39 @@
 
     <body>
 
-        <header class="container header">
-            <div class="row">
-                <div class="col-md-4">
-                    <img class="logo" src="img/logo.png" alt="">
-                </div>
-                <div class="col-md-8">
-                    <h1 class="page-title">Welt<span class="color-secondary">en</span>geschichte</h1>
-                    <p class="page-subtitle">Das größte Epos aller Zeiten – unsere Geschichte ...</p>
-                </div>
-            </div><!--/.row-->
-        </header>
+        <div class="cover">
+            <div class="container">
 
-        <div class="container cover">
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <p class="lead text-center">Lernen Sie in 27 spannenden Episoden die älteste und bis heute überzeugendste Deutung der gesamten Weltgeschichte kennen.</p>
+                <header class="main-header">
+                    <img class="page-logo" src="img/logo.png" alt="">
+                    <h1 class="page-title">Welt<span class="color-secondary">en</span>geschichte</h1>
+                </header>
+
+                <div id="liveEpisode" class="live-episode text-center hidden">
+                    <h2 class="sr-only sr-only-focusable">Countdown</h2>
+                    <p class="episode lead"><span class="label label-success">LIVE</span> Episode <span class="episodeNumber">3</span> <span class="episodeTitle lead-focus">Der Untergang der Alten Welt</span></p>
                 </div>
-            </div><!--/.row-->
-            <div class="countdown text-center">
-                <h2 class="sr-only sr-only-focusable">Countdown</h2>
-                <div id="countdownTimer" class="countdown__inner"></div>
-                <p class="lead text-center">bis zur Episode <span class="lead-focus">3. Der Untergang der Alten Welt</span></p>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                    <div class="video-container">
-                        <img src="img/slide-16x9.jpg" alt="">
+
+                <div id="countdown" class="countdown text-center hidden">
+                    <h2 class="sr-only sr-only-focusable">Countdown</h2>
+                    <div id="countdownTimer" class="countdown__inner"></div>
+                    <p class="episode lead">bis zur Episode <span class="episodeNumber">3</span> <span class="episodeTitle lead-focus">Der Untergang der Alten Welt</span></p>
+                </div>
+
+                <div class="row hero">
+                    <div class="col-md-6 hero__item">
+                        <h1 >Das größte Epos aller Zeiten – unsere Geschichte</h1>
+                        <p class="lead">Lernen Sie in 27 spannenden Episoden die älteste und bis heute überzeugendste Deutung der gesamten Weltgeschichte kennen.</p>
                     </div>
-                </div>
-            </div><!--/.row-->
-        </div><!-- /.container -->
+                    <div class="col-md-6 hero__item">
+                        <div class="video-container">
+                            <img src="img/slide-16x9.jpg" alt="">
+                        </div>
+                    </div>
+                </div><!--/.row-->
+
+            </div><!-- /.container -->
+        </div><!-- /.cover -->
 
         <div id="calendar" class="container">
             <h2 class="text-center">Termine</h2>
