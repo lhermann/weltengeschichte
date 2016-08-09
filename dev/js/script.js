@@ -134,7 +134,7 @@ $(document).ready(function() {
     /*
      * Loop through the calendar days and insert the Livestream event
      */
-    $('#calendar').find('td[id]').each(function(){
+    $('#events').find('td[id]').each(function(){
         var id = $(this).attr("id");
         var calday = id.split("/");
         var caldate = new Date(2016, calday[0]-1, calday[1]);

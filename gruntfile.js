@@ -73,7 +73,7 @@ module.exports = function(grunt) {
       }
     },
     usemin: {
-      html: 'build/index.html',
+      html: ['build/index.html', 'build/impressum.html', 'build/datenschutz.html'],
       css: 'build/css/**.css'
     }
   });

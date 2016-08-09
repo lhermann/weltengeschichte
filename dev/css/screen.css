@@ -4016,28 +4016,23 @@ img {
 
 /* line 72, ../scss/screen.scss */
 .main-header {
-  height: 80px;
+  margin-bottom: 2em;
   margin-top: 2em;
   text-align: left;
 }
 
 /* line 78, ../scss/screen.scss */
-.main-header,
-.hero,
-.countdown,
-.live-episode,
-.events,
-.map {
+.margin-bottom {
   margin-bottom: 4em;
 }
 
-/* line 88, ../scss/screen.scss */
+/* line 83, ../scss/screen.scss */
 .hero .hero__item {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-/* line 94, ../scss/screen.scss */
+/* line 89, ../scss/screen.scss */
 .map,
 .main-footer {
   background-color: #f5f5f5;
@@ -4045,38 +4040,33 @@ img {
   border-top: 1px solid #ddd;
 }
 
-/* line 101, ../scss/screen.scss */
-.map {
-  margin-bottom: 4em;
-}
-/* line 104, ../scss/screen.scss */
+/* line 97, ../scss/screen.scss */
 .map > .row > div {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 110, ../scss/screen.scss */
+/* line 103, ../scss/screen.scss */
 .main-footer {
   padding-bottom: 2em;
   padding-top: 2em;
 }
 
 @media (max-width: 767px) {
-  /* line 116, ../scss/screen.scss */
+  /* line 109, ../scss/screen.scss */
   .main-header {
     text-align: center;
   }
 
-  /* line 120, ../scss/screen.scss */
-  .hero,
-  .countdown,
-  .live-episode {
+  /* line 113, ../scss/screen.scss */
+  .margin-botom {
     margin-bottom: 2.5em;
   }
 
-  /* line 126, ../scss/screen.scss */
+  /* line 117, ../scss/screen.scss */
   .hero h1 {
     font-size: 2em;
+    margin-top: 0;
   }
 }
 /**
@@ -4922,65 +4912,65 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 
-/* line 158, ../scss/screen.scss */
+/* line 150, ../scss/screen.scss */
 .page-logo {
-  height: 100%;
+  height: 80px;
   width: auto;
 }
 
-/* line 163, ../scss/screen.scss */
+/* line 155, ../scss/screen.scss */
 .page-title {
   color: #e24412;
   font-family: "Times New Roman", Times, serif;
   font-size: 2em;
-  line-height: 80px;
   margin: 0;
   text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
-  /* line 173, ../scss/screen.scss */
+  /* line 164, ../scss/screen.scss */
   .page-logo {
     display: inline;
     margin-right: 1em;
     vertical-align: -20px;
   }
 
-  /* line 179, ../scss/screen.scss */
+  /* line 170, ../scss/screen.scss */
   .page-title {
     display: inline;
     font-size: 3em;
+    line-height: 80px;
   }
 }
-/* line 185, ../scss/screen.scss */
+/* line 177, ../scss/screen.scss */
 .video-container {
   box-shadow: 0 0 20px #000;
 }
 
-/* line 189, ../scss/screen.scss */
+/* line 181, ../scss/screen.scss */
 .calendar {
   margin-left: auto;
   margin-right: auto;
   table-layout: fixed;
 }
-/* line 194, ../scss/screen.scss */
+/* line 186, ../scss/screen.scss */
 .calendar th {
   text-align: center;
 }
-/* line 198, ../scss/screen.scss */
+/* line 190, ../scss/screen.scss */
 .calendar.calendar td {
   line-height: 30px;
   padding: 4px;
   width: 14%;
 }
 
-/* line 205, ../scss/screen.scss */
+/* line 197, ../scss/screen.scss */
 .panel-heading h3 {
   font-size: 1.2em;
   margin: 0;
 }
 
-/* line 210, ../scss/screen.scss */
+/* line 202, ../scss/screen.scss */
 .eventday {
   background-color: #1f2d3e;
   border-radius: 30px;
@@ -4991,42 +4981,59 @@ button.list-group-item-danger.active:focus {
   width: 30px;
 }
 
-/* line 220, ../scss/screen.scss */
+/* line 212, ../scss/screen.scss */
 .today {
   color: #e24412;
   font-weight: bold;
 }
-/* line 224, ../scss/screen.scss */
+/* line 216, ../scss/screen.scss */
 .today .eventday {
   background-color: #e24412;
 }
 
-/* line 229, ../scss/screen.scss */
-.embed-responsive-5by2 {
+/* line 221, ../scss/screen.scss */
+.embed-responsive-map {
   padding-bottom: 40%;
+  background-color: #ddd;
 }
 
-/* line 233, ../scss/screen.scss */
+/* line 226, ../scss/screen.scss */
 .map-address {
   border-top: 1px solid #ddd;
 }
 
 @media (min-width: 768px) {
-  /* line 238, ../scss/screen.scss */
+  /* line 231, ../scss/screen.scss */
   .map-address {
+    border-left: 1px solid #ddd;
+    border-top: 0;
     padding-top: 80%;
     position: relative;
-    border-top: none;
-    border-left: 1px solid #ddd;
   }
 
-  /* line 245, ../scss/screen.scss */
+  /* line 238, ../scss/screen.scss */
   .map-address__inner {
     position: absolute;
-    top: calc(50% - 3em);
+    top: calc(50% - 4em);
     width: 100%;
   }
 }
+/* line 245, ../scss/screen.scss */
+.footer-nav {
+  list-style: none;
+  margin: 0;
+}
+/* line 249, ../scss/screen.scss */
+.footer-nav > li {
+  display: inline-block;
+}
+/* line 253, ../scss/screen.scss */
+.footer-nav > li + li::before {
+  color: #ddd;
+  content: '/\00a0';
+  padding: 0 5px;
+}
+
 /**
  * Components w/ JavaScript
  */
@@ -5700,25 +5707,25 @@ button.list-group-item-danger.active:focus {
     opacity: 0;
   }
 }
-/* line 262, ../scss/screen.scss */
+/* line 270, ../scss/screen.scss */
 .live-episode .episode {
   font-size: 2.2em;
 }
 
 @media (max-width: 767px) {
-  /* line 268, ../scss/screen.scss */
+  /* line 276, ../scss/screen.scss */
   .live-episode .episode {
     font-size: 1.5em;
   }
 }
-/* line 273, ../scss/screen.scss */
+/* line 281, ../scss/screen.scss */
 .countdown__inner {
   display: inline-block;
   margin: 3em 0 0;
   width: auto;
 }
 
-/* line 281, ../scss/screen.scss */
+/* line 289, ../scss/screen.scss */
 .flip-clock-divider .flip-clock-label {
   font-size: 1.5em;
   left: 20px;
@@ -5726,13 +5733,13 @@ button.list-group-item-danger.active:focus {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   width: 140px;
 }
-/* line 289, ../scss/screen.scss */
+/* line 297, ../scss/screen.scss */
 .flip-clock-divider.days .flip-clock-label {
   left: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 296, ../scss/screen.scss */
+  /* line 304, ../scss/screen.scss */
   .flip-clock-wrapper ul {
     border-radius: 4px;
     height: 40px;
@@ -5740,40 +5747,40 @@ button.list-group-item-danger.active:focus {
     padding: 0;
     width: 28px;
   }
-  /* line 303, ../scss/screen.scss */
+  /* line 311, ../scss/screen.scss */
   .flip-clock-wrapper ul .up::after {
     top: 19px !important;
   }
-  /* line 307, ../scss/screen.scss */
+  /* line 315, ../scss/screen.scss */
   .flip-clock-wrapper ul .inn {
     font-size: 30px !important;
     -webkit-font-smoothing: antialiased;
     line-height: 38px;
   }
 
-  /* line 314, ../scss/screen.scss */
+  /* line 322, ../scss/screen.scss */
   .flip-clock-divider {
     height: 44px;
     width: 10px;
   }
-  /* line 318, ../scss/screen.scss */
+  /* line 326, ../scss/screen.scss */
   .flip-clock-divider .flip-clock-label {
     font-size: 1em;
     left: 10px;
     width: 64px;
   }
 
-  /* line 325, ../scss/screen.scss */
+  /* line 333, ../scss/screen.scss */
   .flip-clock-dot {
     height: 6px;
     left: 2px;
     width: 6px;
   }
-  /* line 330, ../scss/screen.scss */
+  /* line 338, ../scss/screen.scss */
   .flip-clock-dot.top {
     top: 12px;
   }
-  /* line 331, ../scss/screen.scss */
+  /* line 339, ../scss/screen.scss */
   .flip-clock-dot.bottom {
     bottom: 12px;
   }
