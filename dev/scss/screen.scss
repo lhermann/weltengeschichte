@@ -17,8 +17,11 @@
 
 $brand-primary: 	#e24412;
 $brand-secondary: 	#1f2d3e;
-$brand-subtle: 		lighten(black, 75%);
-$shadow-color:			rgba(0, 0, 0, .3);
+$brand-subtle: 		#ddd;
+
+$bg-subtle:			#f5f5f5;
+
+$shadow-color:		rgba(0, 0, 0, .3);
 
 .color-primary { color: $brand-primary; }
 .color-secondary { color: $brand-secondary; }
@@ -75,7 +78,9 @@ img {
 .main-header,
 .hero,
 .countdown,
-.live-episode {
+.live-episode,
+.events,
+.map {
 	margin-bottom: 4em;
 }
 
@@ -84,6 +89,27 @@ img {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+}
+
+.map,
+.main-footer {
+	background-color: $bg-subtle;
+	border-bottom: 1px solid $brand-subtle;
+	border-top: 1px solid $brand-subtle;
+}
+
+.map {
+	margin-bottom: 4em;
+
+	> .row > div {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.main-footer {
+	padding-bottom: 2em;
+	padding-top: 2em;
 }
 
 @media (max-width: 767px) {
@@ -125,7 +151,7 @@ img {
 $panel-primary-border:		$brand-primary;
 $panel-primary-heading-bg:	$brand-primary;
 @import 'bootstrap/panels';
-// @import 'bootstrap/responsive-embed';
+@import 'bootstrap/responsive-embed';
 // @import 'bootstrap/wells';
 // @import 'bootstrap/close';
 
@@ -197,6 +223,29 @@ $panel-primary-heading-bg:	$brand-primary;
 
 	.eventday {
 		background-color: $brand-primary;
+	}
+}
+
+.embed-responsive-5by2 {
+	padding-bottom: 40%;
+}
+
+.map-address {
+	border-top: 1px solid $brand-subtle;
+}
+
+@media (min-width: 768px) {
+	.map-address {
+		padding-top: 80%;
+		position: relative;
+		border-top: none;
+		border-left: 1px solid $brand-subtle;
+	}
+
+	.map-address__inner {
+		position: absolute;
+		top: calc(50% - 3em);
+		width: 100%;
 	}
 }
 
