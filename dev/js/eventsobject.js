@@ -16,7 +16,7 @@ var events = [
 		title: "Der Patriarch von Uru"
 	},
 	{
-		time: new Date(2016, 8, 29, 19, 00),
+		time: new Date(2016, 8, 28, 19, 00),
 		title: "An den Brunnen von Aram"
 	},
 	{

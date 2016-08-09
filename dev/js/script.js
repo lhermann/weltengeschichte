@@ -6,11 +6,11 @@ $(document).ready(function() {
     var clock;
 
     // Initiate FlipClock
-    clock = $('.countdown__inner').FlipClock( difference, {
+    clock = $('.countdown__inner').FlipClock({
         clockFace: 'DailyCounter',
         countdown: true,
         language: "de",
-        autostart: false,
+        autoStart: false,
         callbacks: {
             stop: function() {
                 $('.message').html('The clock has stopped!')
@@ -19,8 +19,10 @@ $(document).ready(function() {
     });
 
     // Calculate Seconds until next presentation
-    var now = new Date().getTime();
-    var next = new Date(2016, 9, 23, 19, 00);
+    var now = new Date();
+    var next = new Date(2016, 8, 23, 19, 00);
+    console.log(now);
+    console.log(next);
     var difference = (next - now) / 1000;
 
     // Start the countdown
@@ -32,7 +34,7 @@ $(document).ready(function() {
      * Loop through the calendar days and insert the Livestream event
      */
     var calendar = $('#calendar');
-    $('#calendar').find('td').each(function(){
+    $('#calendar').find('td[id]').each(function(){
         var id = $(this).attr("id");
         if( id !== undefined ) {
             // console.log(id);
