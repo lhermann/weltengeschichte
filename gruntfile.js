@@ -28,6 +28,7 @@ module.exports = function(grunt) {
             src: [
               'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
               'node_modules/flipclock/compiled/flipclock.js',
+              'dev/js/eventsobject.js',
               'dev/js/script.js'
             ],
             dest: '.grunt/js/<%= pkg.name %>.js',
@@ -72,7 +73,8 @@ module.exports = function(grunt) {
       }
     },
     usemin: {
-      html: 'build/index.html'
+      html: 'build/index.html',
+      css: 'build/css/**.css'
     }
   });
 
