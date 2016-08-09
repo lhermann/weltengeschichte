@@ -2,35 +2,58 @@ $(document).ready(function() {
     /*
      * Reused variables
      */
-    // var now = new Date();
-    var now = new Date(2016, 8, 13, 11, 20);
+    var now = new Date();
+    // var now = new Date(2016, 8, 24, 19, 44);
 
 
-    // /*
-    //  * Initiating the FlipClock Countdown
-    //  */
-    // var clock;
+    /*
+     * Determine next and currently active event
+     */
+    var nextEvent,
+        nextEventIndex,
+        activeEvent,
+        activeEventIndex,
+        nowLess90Min = new Date(now.getTime()-(90*60*1000));
 
-    // // Initiate FlipClock
-    // clock = $('.countdown__inner').FlipClock({
-    //     clockFace: 'DailyCounter',
-    //     countdown: true,
-    //     language: "de",
-    //     autoStart: false,
-    //     callbacks: {
-    //         stop: function() {
-    //             $('.message').html('The clock has stopped!')
-    //         }
-    //     }
-    // });
+    for (var i = 0; i < events.length; ++i) {
+        if(events[i].time < now && events[i].time > nowLess90Min) {
+            activeEvent = events[i];
+            activeEventIndex = i;
+            continue;
+        } else if(events[i].time < now) {
+            continue;
+        } else {
+            nextEvent = events[i];
+            nextEventIndex = i;
+            break;
+        }
+    }
 
-    // // Calculate Seconds until next presentation
-    // var next = new Date(2016, 8, 23, 19, 00);
-    // var difference = (next - now) / 1000;
 
-    // // Start the countdown
-    // clock.setTime(difference);
-    // clock.start();
+    /*
+     * Initiating the FlipClock Countdown
+     */
+    var clock;
+
+    // Initiate FlipClock
+    clock = $('#countdownTimer').FlipClock({
+        clockFace: 'DailyCounter',
+        countdown: true,
+        language: "de",
+        autoStart: false,
+        callbacks: {
+            stop: function() {
+                $('.message').html('The clock has stopped!')
+            }
+        }
+    });
+
+    // Calculate Seconds until next presentation
+    var difference = (nextEvent.time - now) / 1000;
+
+    // Start the countdown
+    clock.setTime(difference);
+    clock.start();
 
 
 
@@ -39,10 +62,9 @@ $(document).ready(function() {
      */
     var tl = $('#themenlist');
     var counter = 0;
-    for (var i = 0; i < events.length; ++i) {
+    for (var i = nextEventIndex; i < events.length; ++i) {
 
-        // Logical checks
-        if(events[i].time < now) continue;
+        // Limit number of events listed
         counter++;
         if(counter > 5) {
             if(counter === 6) $(tl).append( $('<li class="list-group-item">...</li>') );
@@ -67,6 +89,7 @@ $(document).ready(function() {
         var caldate = new Date(2016, calday[0]-1, calday[1]);
 
         // Highlight Today
+        // console.log(now.toDateString() + ' --- ' + caldate.toDateString());
         if( now.toDateString() === caldate.toDateString() ) {
             $(this).addClass('today');
         }

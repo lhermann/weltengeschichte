@@ -4008,9 +4008,99 @@ img {
   width: 100%;
 }
 
+/* line 62, ../scss/screen.scss */
+.lead-focus {
+  color: #e24412;
+  font-weight: bold;
+}
+
 /**
  * Components
  */
+/* line 5, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+/* line 20, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.label:empty {
+  display: none;
+}
+/* line 25, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+
+/* line 33, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+a.label:hover, a.label:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 44, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.label-default {
+  background-color: #777777;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_labels.scss */
+.label-default[href]:hover, .label-default[href]:focus {
+  background-color: #5e5e5e;
+}
+
+/* line 48, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.label-primary {
+  background-color: #337ab7;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_labels.scss */
+.label-primary[href]:hover, .label-primary[href]:focus {
+  background-color: #286090;
+}
+
+/* line 52, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.label-success {
+  background-color: #5cb85c;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_labels.scss */
+.label-success[href]:hover, .label-success[href]:focus {
+  background-color: #449d44;
+}
+
+/* line 56, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.label-info {
+  background-color: #5bc0de;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_labels.scss */
+.label-info[href]:hover, .label-info[href]:focus {
+  background-color: #31b0d5;
+}
+
+/* line 60, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.label-warning {
+  background-color: #f0ad4e;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_labels.scss */
+.label-warning[href]:hover, .label-warning[href]:focus {
+  background-color: #ec971f;
+}
+
+/* line 64, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
+.label-danger {
+  background-color: #d9534f;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_labels.scss */
+.label-danger[href]:hover, .label-danger[href]:focus {
+  background-color: #c9302c;
+}
+
 /* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss */
 .badge {
   display: inline-block;
@@ -4734,41 +4824,41 @@ button.list-group-item-danger.active:focus {
   border-bottom-color: #ebccd1;
 }
 
-/* line 91, ../scss/screen.scss */
+/* line 96, ../scss/screen.scss */
 .logo {
   max-width: 260px;
   width: 100%;
 }
 
-/* line 96, ../scss/screen.scss */
+/* line 101, ../scss/screen.scss */
 .video-container {
   box-shadow: 0 0 20px #000;
 }
 
-/* line 100, ../scss/screen.scss */
+/* line 105, ../scss/screen.scss */
 .calendar {
   margin-left: auto;
   margin-right: auto;
   table-layout: fixed;
 }
-/* line 105, ../scss/screen.scss */
+/* line 110, ../scss/screen.scss */
 .calendar th {
   text-align: center;
 }
-/* line 109, ../scss/screen.scss */
+/* line 114, ../scss/screen.scss */
 .calendar.calendar td {
   line-height: 30px;
   padding: 4px;
   width: 14%;
 }
 
-/* line 116, ../scss/screen.scss */
+/* line 121, ../scss/screen.scss */
 .panel-heading h3 {
   font-size: 1.2em;
   margin: 0;
 }
 
-/* line 121, ../scss/screen.scss */
+/* line 126, ../scss/screen.scss */
 .eventday {
   background-color: #1f2d3e;
   border-radius: 30px;
@@ -4779,12 +4869,12 @@ button.list-group-item-danger.active:focus {
   width: 30px;
 }
 
-/* line 131, ../scss/screen.scss */
+/* line 136, ../scss/screen.scss */
 .today {
   color: #e24412;
   font-weight: bold;
 }
-/* line 135, ../scss/screen.scss */
+/* line 140, ../scss/screen.scss */
 .today .eventday {
   background-color: #e24412;
 }
@@ -5462,12 +5552,72 @@ button.list-group-item-danger.active:focus {
     opacity: 0;
   }
 }
-/* line 149, ../scss/screen.scss */
+/* line 154, ../scss/screen.scss */
 .countdown__inner {
   display: inline-block;
+  margin: 2em 0 0;
   width: auto;
 }
 
+/* line 162, ../scss/screen.scss */
+.flip-clock-divider .flip-clock-label {
+  font-size: 1.5em;
+  left: 20px;
+  right: auto !important;
+  width: 140px;
+}
+/* line 169, ../scss/screen.scss */
+.flip-clock-divider.days .flip-clock-label {
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  /* line 176, ../scss/screen.scss */
+  .flip-clock-wrapper ul {
+    border-radius: 4px;
+    height: 40px;
+    margin: 2px;
+    padding: 0;
+    width: 28px;
+  }
+  /* line 183, ../scss/screen.scss */
+  .flip-clock-wrapper ul .up::after {
+    top: 19px !important;
+  }
+  /* line 187, ../scss/screen.scss */
+  .flip-clock-wrapper ul .inn {
+    font-size: 30px !important;
+    -webkit-font-smoothing: antialiased;
+    line-height: 38px;
+  }
+
+  /* line 194, ../scss/screen.scss */
+  .flip-clock-divider {
+    height: 44px;
+    width: 10px;
+  }
+  /* line 198, ../scss/screen.scss */
+  .flip-clock-divider .flip-clock-label {
+    font-size: 1em;
+    left: 10px;
+    width: 64px;
+  }
+
+  /* line 205, ../scss/screen.scss */
+  .flip-clock-dot {
+    height: 6px;
+    left: 2px;
+    width: 6px;
+  }
+  /* line 210, ../scss/screen.scss */
+  .flip-clock-dot.top {
+    top: 12px;
+  }
+  /* line 211, ../scss/screen.scss */
+  .flip-clock-dot.bottom {
+    bottom: 12px;
+  }
+}
 /* line 14, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .clearfix:before, .clearfix:after {
   content: " ";

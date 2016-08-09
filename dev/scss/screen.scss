@@ -59,6 +59,11 @@ img {
 	width: 100%;
 }
 
+.lead-focus {
+	color: $brand-primary;
+	font-weight: bold;
+}
+
 
 
 /**
@@ -73,7 +78,7 @@ img {
 // @import 'bootstrap/breadcrumbs';
 // @import 'bootstrap/pagination';
 // @import 'bootstrap/pager';
-// @import 'bootstrap/labels';
+@import 'bootstrap/labels';
 @import 'bootstrap/badges';
 // @import 'bootstrap/jumbotron';
 // @import 'bootstrap/thumbnails';
@@ -148,7 +153,63 @@ $panel-primary-heading-bg:	$brand-primary;
 
 .countdown__inner {
 	display: inline-block;
+	margin: 2em 0 0;
 	width: auto;
+}
+
+.flip-clock-divider {
+
+	.flip-clock-label {
+		font-size: 1.5em;
+		left: 20px;
+		right: auto !important;
+		width: 140px;
+	}
+
+	&.days .flip-clock-label {
+		left: 0;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.flip-clock-wrapper ul {
+		border-radius: 4px;
+		height: 40px;
+		margin: 2px;
+		padding: 0;
+		width: 28px;
+
+		.up::after {
+			top: 19px !important;
+		}
+
+		.inn {
+			font-size: 30px !important;
+			-webkit-font-smoothing: antialiased; // Hack for Safari Font rendering during animation
+			line-height: 38px;
+		}
+	}
+
+	.flip-clock-divider {
+		height: 44px;
+		width: 10px;
+
+		.flip-clock-label {
+			font-size: 1em;
+			left: 10px;
+			width: 64px;
+		}
+	}
+
+	.flip-clock-dot {
+		height: 6px;
+		left: 2px;
+		width: 6px;
+
+		&.top { top: 12px; }
+		&.bottom { bottom: 12px; }
+	}
 }
 
 // Utility classes
