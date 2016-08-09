@@ -46,8 +46,7 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
 	font-family: "Times New Roman", Times, serif;
 }
 
@@ -75,14 +74,16 @@ img {
 // @import 'bootstrap/pagination';
 // @import 'bootstrap/pager';
 // @import 'bootstrap/labels';
-// @import 'bootstrap/badges';
+@import 'bootstrap/badges';
 // @import 'bootstrap/jumbotron';
 // @import 'bootstrap/thumbnails';
 // @import 'bootstrap/alerts';
 // @import 'bootstrap/progress-bars';
 // @import 'bootstrap/media';
-// @import 'bootstrap/list-group';
-// @import 'bootstrap/panels';
+@import 'bootstrap/list-group';
+$panel-primary-border:		$brand-primary;
+$panel-primary-heading-bg:	$brand-primary;
+@import 'bootstrap/panels';
 // @import 'bootstrap/responsive-embed';
 // @import 'bootstrap/wells';
 // @import 'bootstrap/close';
@@ -94,15 +95,6 @@ img {
 
 .video-container {
 	box-shadow: 0 0 20px #000;
-}
-
-.themen {
-	list-style: none;
-	padding: 0;
-}
-
-.themen__meta {
-	color: $brand-subtle;
 }
 
 .calendar {
@@ -121,14 +113,28 @@ img {
 	}
 }
 
+.panel-heading h3 {
+	font-size: 1.2em;
+	margin: 0;
+}
+
 .eventday {
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	color: white;
 	background-color: $brand-secondary;
 	border-radius: 30px;
+	color: white;
 	cursor: pointer;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+
+.today {
+	color: $brand-primary;
+	font-weight: bold;
+
+	.eventday {
+		background-color: $brand-primary;
+	}
 }
 
 /**
