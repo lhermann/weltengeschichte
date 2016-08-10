@@ -9,7 +9,7 @@
         file_put_contents('log/payload.txt', date("\n[d M Y H:i:s]\n").print_r($obj, true), FILE_APPEND);
 
         // perform the deploy
-        $exec_string = 'cd /var/customers/webs/jmm/weltengeschichte.de.repo/ && git reset --hard HEAD && git pull && grunt deploy';
+        $exec_string = 'cd /var/customers/webs/jmm/weltengeschichte.de.repo/ && git reset --hard HEAD && git pull && && npm install && grunt deploy';
         exec ( $exec_string, $output);
 
         // Log the output
