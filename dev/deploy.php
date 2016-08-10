@@ -7,7 +7,8 @@
         exec ( $exec_string, $output);
         file_put_contents('log/output.txt', $output, FILE_APPEND);
     }
-
-
-    file_put_contents('log/post.txt', print_r($_POST));
+    $json = file_get_contents('php://input');
+    $obj = json_decode($json);
+    print_r($obj);
+    file_put_contents('log/post.txt', print_r($obj, true));
 ?>
