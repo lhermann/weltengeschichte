@@ -21,6 +21,12 @@ module.exports = function(grunt) {
         src: ['*', 'css/fonts/**', 'img/**'],
         dest: 'build/',
         filter: 'isFile'
+      },
+      deploy: {
+        expand: true,
+        cwd: 'build',
+        src: '**',
+        dest: '../weltengeschichte.de/test/'
       }
     },
     concat: {
@@ -88,7 +94,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-filerev');
 
   // Tasks.
-  grunt.registerTask('dev', ['clean:dev', 'copy:dev', 'compass:dev']);
-  grunt.registerTask('build', ['clean:build', 'copy:build', 'useminPrepare', 'concat:build', 'uglify:build', 'compass:build', 'filerev', 'usemin', 'clean:cleanup']);
+  grunt.registerTask('dev', 'Set up dev environment', ['clean:dev', 'copy:dev', 'compass:dev']);
+  grunt.registerTask('build', 'Build the website into the build/ filder', ['clean:build', 'copy:build', 'useminPrepare', 'concat:build', 'uglify:build', 'compass:build', 'filerev', 'usemin', 'clean:cleanup']);
+  grunt.registerTask('deploy', 'Deploy the website', customDeployTask);
+
+  function customDeployTask() {
+    grunt.task.run('build');
+    grunt.task.run('copy:deploy');
+  }
 
 };
