@@ -7,5 +7,6 @@
         exec ( $exec_string, $output);
         file_put_contents('log/output.txt', $output, FILE_APPEND);
     }
+
     file_put_contents('log/post.txt', print_r($_POST), FILE_APPEND);
 ?>
