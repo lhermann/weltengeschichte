@@ -10,8 +10,9 @@
 
         // perform the deploy
         putenv('PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:');
-        $exec_string = 'cd /var/customers/webs/jmm/weltengeschichte.de.repo/ && git reset --hard HEAD && git pull && && npm install && grunt deploy';
-        exec ( $exec_string, $output);
+        $exec_string = 'cd /var/customers/webs/jmm/weltengeschichte.de.repo/ && git reset --hard HEAD && git pull && grunt deploy';
+        exec ( $exec_string, $output );
+        print_r( $output );
 
         // Log the output
         file_put_contents('log/output.txt', date("\n[d M Y H:i:s]\n").print_r($output, true), FILE_APPEND);
