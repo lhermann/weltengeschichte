@@ -79,6 +79,10 @@ img {
 	margin-bottom: 4em;
 }
 
+.margin-top {
+	margin-top: 4em;
+}
+
 .hero {
 	.hero__item {
 		padding-left: 30px;
@@ -89,8 +93,8 @@ img {
 .map,
 .main-footer {
 	background-color: $bg-subtle;
-	border-bottom: 1px solid $brand-subtle;
-	border-top: 1px solid $brand-subtle;
+	// border-bottom: 1px solid $brand-subtle;
+	// border-top: 1px solid $brand-subtle;
 }
 
 .map {
@@ -175,7 +179,7 @@ $panel-primary-heading-bg:	$brand-primary;
 }
 
 .video-container {
-	box-shadow: 0 0 20px #000;
+	box-shadow: 0 0 20px $shadow-color;
 }
 
 .calendar {
@@ -219,26 +223,50 @@ $panel-primary-heading-bg:	$brand-primary;
 }
 
 .embed-responsive-map {
-	padding-bottom: 40%;
-	background-color: #ddd;
+	// background-color: #ddd;
+	padding-bottom: 60%;
 }
 
-.map-address {
-	border-top: 1px solid $brand-subtle;
+// .map-address {
+// 	border-top: 1px solid $brand-subtle;
+// }
+
+.map-address__inner {
+	margin: 2em 0;
 }
 
 @media (min-width: 768px) {
+	.embed-responsive-map {
+		padding-bottom: 50%;
+	}
+
 	.map-address {
-		border-left: 1px solid $brand-subtle;
+		// border-left: 1px solid $brand-subtle;
 		border-top: 0;
-		padding-top: 80%;
+		padding-top: 100%;
 		position: relative;
 	}
 
 	.map-address__inner {
+		margin: 0;
 		position: absolute;
 		top: calc(50% - 4em);
 		width: 100%;
+	}
+}
+
+.description {
+	background-color: black;
+	color: white;
+}
+
+.description__image {
+	padding-left: 0;
+}
+
+@media (max-width: 767px) {
+	.description__text {
+		padding: 0 3em;
 	}
 }
 
