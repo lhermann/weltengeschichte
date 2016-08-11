@@ -49,6 +49,19 @@ img {
 	width: 100%;
 }
 
+.container,
+.container-fluid {
+	position: relative;
+	z-index: 0;
+}
+
+.drop-shadow {
+	box-shadow: 0 0 40px $shadow-color;
+	overflow: auto; // turn off collapsing margins
+	position: relative;
+	z-index: 1;
+}
+
 .times {
 	font-family: "Times New Roman", Times, serif;
 }
@@ -88,19 +101,6 @@ img {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
-}
-
-.events,
-.map,
-.description {
-	position: relative;
-	z-index: 0;
-}
-
-.events,
-.description {
-	z-index: 1;
-	box-shadow: 0 0 40px $shadow-color;
 }
 
 .map,
@@ -197,18 +197,35 @@ img {
 }
 
 .events-calendar {
-	padding-right: 0;
+	padding: 0;
 
-	&:last-child {
-		padding-left: 0;
+	@media (min-width: $screen-md-min) {
+		&:nth-last-child(2) {
+			padding-left: 15px;
+		}
 	}
 }
 
 .panel-calendar {
+	border: 0;
+	border-left: 1px solid $brand-primary;
 	border-radius: 0;
-	border-right: 0;
 	box-shadow: none;
 	margin-bottom: 0;
+
+	@media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+		border: 0;
+		border-top: 1px solid $brand-primary;
+
+		.events-calendar:last-child & {
+			border-left: 1px solid $brand-subtle;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		border: 0;
+		border-top: 1px solid $brand-primary;
+	}
 
 	.panel-heading {
 		border-radius: 0;
@@ -216,21 +233,11 @@ img {
 	}
 }
 
-@media (max-width: 767px) {
-	.events-calendar {
-		padding-left: 0;
-	}
-
-	.panel-calendar {
-		border-left: 0;
-		border-bottom: 0;
-	}
-}
-
 .calendar {
-	margin-left: auto;
-	margin-right: auto;
-	table-layout: fixed;
+	margin: 0;
+	// table-layout: fixed;
+	width: 101%;
+    max-width: 101%;
 
 	th {
 		text-align: center;
@@ -268,25 +275,24 @@ img {
 }
 
 .embed-responsive-map {
-	// background-color: #ddd;
-	padding-bottom: 60%;
-}
+	padding-bottom: 50%;
 
-// .map-address {
-// 	border-top: 1px solid $brand-subtle;
-// }
+	@media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+		padding-bottom: 40%;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		padding-bottom: 60%;
+	}
+}
 
 .map-address__inner {
 	margin: 2em 0;
 }
 
-@media (min-width: 768px) {
-	.embed-responsive-map {
-		padding-bottom: 50%;
-	}
+@media (min-width: $screen-md-min) {
 
 	.map-address {
-		// border-left: 1px solid $brand-subtle;
 		border-top: 0;
 		padding-top: 100%;
 		position: relative;
