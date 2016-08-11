@@ -4006,7 +4006,7 @@ img {
 .cover {
   background-image: url("../img/bg.jpg");
   background-size: 50%;
-  box-shadow: 0 40px 40px -40px rgba(0, 0, 0, 0.3) inset, 0 -40px 40px -40px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 40px 40px -40px rgba(0, 0, 0, 0.3) inset;
   padding: 1px 0;
 }
 /* line 67, ../scss/screen.scss */
@@ -4038,35 +4038,50 @@ img {
 }
 
 /* line 93, ../scss/screen.scss */
+.events,
+.map,
+.description {
+  position: relative;
+  z-index: 0;
+}
+
+/* line 100, ../scss/screen.scss */
+.events,
+.description {
+  z-index: 1;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+/* line 106, ../scss/screen.scss */
 .map,
 .main-footer {
   background-color: #f5f5f5;
 }
 
-/* line 101, ../scss/screen.scss */
+/* line 115, ../scss/screen.scss */
 .map > .row > div {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 107, ../scss/screen.scss */
+/* line 121, ../scss/screen.scss */
 .main-footer {
   padding-bottom: 2em;
   padding-top: 2em;
 }
 
 @media (max-width: 767px) {
-  /* line 113, ../scss/screen.scss */
+  /* line 127, ../scss/screen.scss */
   .main-header {
     text-align: center;
   }
 
-  /* line 117, ../scss/screen.scss */
+  /* line 131, ../scss/screen.scss */
   .margin-botom {
     margin-bottom: 2.5em;
   }
 
-  /* line 121, ../scss/screen.scss */
+  /* line 135, ../scss/screen.scss */
   .hero h1 {
     font-size: 2em;
     margin-top: 0;
@@ -4764,26 +4779,26 @@ button.list-group-item-danger.active:focus {
 
 /* line 257, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_panels.scss */
 .panel-primary {
-  border-color: #e24412;
+  border-color: #337ab7;
 }
 /* line 6, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_panels.scss */
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #e24412;
-  border-color: #e24412;
+  background-color: #337ab7;
+  border-color: #337ab7;
 }
 /* line 11, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_panels.scss */
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #e24412;
+  border-top-color: #337ab7;
 }
 /* line 14, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_panels.scss */
 .panel-primary > .panel-heading .badge {
-  color: #e24412;
+  color: #337ab7;
   background-color: #fff;
 }
 /* line 20, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_panels.scss */
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #e24412;
+  border-bottom-color: #337ab7;
 }
 
 /* line 260, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_panels.scss */
@@ -4915,13 +4930,13 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 
-/* line 154, ../scss/screen.scss */
+/* line 168, ../scss/screen.scss */
 .page-logo {
   height: 80px;
   width: auto;
 }
 
-/* line 159, ../scss/screen.scss */
+/* line 173, ../scss/screen.scss */
 .page-title {
   color: #e24412;
   font-family: "Times New Roman", Times, serif;
@@ -4931,51 +4946,85 @@ button.list-group-item-danger.active:focus {
 }
 
 @media (min-width: 768px) {
-  /* line 168, ../scss/screen.scss */
+  /* line 182, ../scss/screen.scss */
   .page-logo {
     display: inline;
     margin-right: 1em;
     vertical-align: -20px;
   }
 
-  /* line 174, ../scss/screen.scss */
+  /* line 188, ../scss/screen.scss */
   .page-title {
     display: inline;
     font-size: 3em;
     line-height: 80px;
   }
 }
-/* line 181, ../scss/screen.scss */
+/* line 195, ../scss/screen.scss */
 .video-container {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-/* line 185, ../scss/screen.scss */
+/* line 199, ../scss/screen.scss */
+.events-calendar {
+  padding-right: 0;
+}
+/* line 202, ../scss/screen.scss */
+.events-calendar:last-child {
+  padding-left: 0;
+}
+
+/* line 207, ../scss/screen.scss */
+.panel-calendar {
+  border-radius: 0;
+  border-right: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+/* line 213, ../scss/screen.scss */
+.panel-calendar .panel-heading {
+  border-radius: 0;
+  color: #e24412;
+}
+
+@media (max-width: 767px) {
+  /* line 220, ../scss/screen.scss */
+  .events-calendar {
+    padding-left: 0;
+  }
+
+  /* line 224, ../scss/screen.scss */
+  .panel-calendar {
+    border-left: 0;
+    border-bottom: 0;
+  }
+}
+/* line 230, ../scss/screen.scss */
 .calendar {
   margin-left: auto;
   margin-right: auto;
   table-layout: fixed;
 }
-/* line 190, ../scss/screen.scss */
+/* line 235, ../scss/screen.scss */
 .calendar th {
   text-align: center;
 }
-/* line 194, ../scss/screen.scss */
+/* line 239, ../scss/screen.scss */
 .calendar.calendar td {
   line-height: 30px;
-  padding: 4px;
+  padding: 8px 4px;
   width: 14%;
 }
 
-/* line 201, ../scss/screen.scss */
+/* line 246, ../scss/screen.scss */
 .panel-heading h3 {
   font-size: 1.2em;
   margin: 0;
 }
 
-/* line 206, ../scss/screen.scss */
+/* line 251, ../scss/screen.scss */
 .eventday {
-  background-color: #1f2d3e;
+  background-color: #e24412;
   border-radius: 30px;
   color: white;
   cursor: pointer;
@@ -4984,74 +5033,74 @@ button.list-group-item-danger.active:focus {
   width: 30px;
 }
 
-/* line 216, ../scss/screen.scss */
+/* line 261, ../scss/screen.scss */
 .today {
-  color: #e24412;
+  color: #1f2d3e;
   font-weight: bold;
 }
-/* line 220, ../scss/screen.scss */
+/* line 265, ../scss/screen.scss */
 .today .eventday {
-  background-color: #e24412;
+  background-color: #1f2d3e;
 }
 
-/* line 225, ../scss/screen.scss */
+/* line 270, ../scss/screen.scss */
 .embed-responsive-map {
   padding-bottom: 60%;
 }
 
-/* line 234, ../scss/screen.scss */
+/* line 279, ../scss/screen.scss */
 .map-address__inner {
   margin: 2em 0;
 }
 
 @media (min-width: 768px) {
-  /* line 239, ../scss/screen.scss */
+  /* line 284, ../scss/screen.scss */
   .embed-responsive-map {
     padding-bottom: 50%;
   }
 
-  /* line 243, ../scss/screen.scss */
+  /* line 288, ../scss/screen.scss */
   .map-address {
     border-top: 0;
     padding-top: 100%;
     position: relative;
   }
 
-  /* line 250, ../scss/screen.scss */
+  /* line 295, ../scss/screen.scss */
   .map-address__inner {
     margin: 0;
     position: absolute;
-    top: calc(50% - 4em);
+    top: calc(50% - 5em);
     width: 100%;
   }
 }
-/* line 258, ../scss/screen.scss */
+/* line 303, ../scss/screen.scss */
 .description {
   background-color: black;
   color: white;
 }
 
-/* line 263, ../scss/screen.scss */
+/* line 308, ../scss/screen.scss */
 .description__image {
   padding-left: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 268, ../scss/screen.scss */
+  /* line 313, ../scss/screen.scss */
   .description__text {
     padding: 0 3em;
   }
 }
-/* line 273, ../scss/screen.scss */
+/* line 318, ../scss/screen.scss */
 .footer-nav {
   list-style: none;
   margin: 0;
 }
-/* line 277, ../scss/screen.scss */
+/* line 322, ../scss/screen.scss */
 .footer-nav > li {
   display: inline-block;
 }
-/* line 281, ../scss/screen.scss */
+/* line 326, ../scss/screen.scss */
 .footer-nav > li + li::before {
   color: #ddd;
   content: '/\00a0';
@@ -5731,25 +5780,25 @@ button.list-group-item-danger.active:focus {
     opacity: 0;
   }
 }
-/* line 298, ../scss/screen.scss */
+/* line 343, ../scss/screen.scss */
 .live-episode .episode {
   font-size: 2.2em;
 }
 
 @media (max-width: 767px) {
-  /* line 304, ../scss/screen.scss */
+  /* line 349, ../scss/screen.scss */
   .live-episode .episode {
     font-size: 1.5em;
   }
 }
-/* line 309, ../scss/screen.scss */
+/* line 354, ../scss/screen.scss */
 .countdown__inner {
   display: inline-block;
   margin: 3em 0 0;
   width: auto;
 }
 
-/* line 317, ../scss/screen.scss */
+/* line 362, ../scss/screen.scss */
 .flip-clock-divider .flip-clock-label {
   font-size: 1.5em;
   left: 20px;
@@ -5757,13 +5806,13 @@ button.list-group-item-danger.active:focus {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   width: 140px;
 }
-/* line 325, ../scss/screen.scss */
+/* line 370, ../scss/screen.scss */
 .flip-clock-divider.days .flip-clock-label {
   left: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 332, ../scss/screen.scss */
+  /* line 377, ../scss/screen.scss */
   .flip-clock-wrapper ul {
     border-radius: 4px;
     height: 40px;
@@ -5771,40 +5820,40 @@ button.list-group-item-danger.active:focus {
     padding: 0;
     width: 28px;
   }
-  /* line 339, ../scss/screen.scss */
+  /* line 384, ../scss/screen.scss */
   .flip-clock-wrapper ul .up::after {
     top: 19px !important;
   }
-  /* line 343, ../scss/screen.scss */
+  /* line 388, ../scss/screen.scss */
   .flip-clock-wrapper ul .inn {
     font-size: 30px !important;
     -webkit-font-smoothing: antialiased;
     line-height: 38px;
   }
 
-  /* line 350, ../scss/screen.scss */
+  /* line 395, ../scss/screen.scss */
   .flip-clock-divider {
     height: 44px;
     width: 10px;
   }
-  /* line 354, ../scss/screen.scss */
+  /* line 399, ../scss/screen.scss */
   .flip-clock-divider .flip-clock-label {
     font-size: 1em;
     left: 10px;
     width: 64px;
   }
 
-  /* line 361, ../scss/screen.scss */
+  /* line 406, ../scss/screen.scss */
   .flip-clock-dot {
     height: 6px;
     left: 2px;
     width: 6px;
   }
-  /* line 366, ../scss/screen.scss */
+  /* line 411, ../scss/screen.scss */
   .flip-clock-dot.top {
     top: 12px;
   }
-  /* line 367, ../scss/screen.scss */
+  /* line 412, ../scss/screen.scss */
   .flip-clock-dot.bottom {
     bottom: 12px;
   }

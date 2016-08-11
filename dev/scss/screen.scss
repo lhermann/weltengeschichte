@@ -61,7 +61,7 @@ img {
 .cover {
 	background-image: url('../img/bg.jpg');
 	background-size: 50%;
-	box-shadow: 0 40px 40px -40px $shadow-color inset, 0 -40px 40px -40px $shadow-color inset;
+	box-shadow: 0 40px 40px -40px $shadow-color inset;
 	padding: 1px 0;
 
 	.lead {
@@ -90,9 +90,23 @@ img {
 	}
 }
 
+.events,
+.map,
+.description {
+	position: relative;
+	z-index: 0;
+}
+
+.events,
+.description {
+	z-index: 1;
+	box-shadow: 0 0 40px $shadow-color;
+}
+
 .map,
 .main-footer {
 	background-color: $bg-subtle;
+	// box-shadow: 0 40px 40px -40px $shadow-color inset;
 	// border-bottom: 1px solid $brand-subtle;
 	// border-top: 1px solid $brand-subtle;
 }
@@ -144,8 +158,8 @@ img {
 // @import 'bootstrap/progress-bars';
 // @import 'bootstrap/media';
 @import 'bootstrap/list-group';
-$panel-primary-border:		$brand-primary;
-$panel-primary-heading-bg:	$brand-primary;
+// $panel-primary-border:		$brand-primary;
+// $panel-primary-heading-bg:	$brand-primary;
 @import 'bootstrap/panels';
 @import 'bootstrap/responsive-embed';
 // @import 'bootstrap/wells';
@@ -182,6 +196,37 @@ $panel-primary-heading-bg:	$brand-primary;
 	box-shadow: 0 0 20px $shadow-color;
 }
 
+.events-calendar {
+	padding-right: 0;
+
+	&:last-child {
+		padding-left: 0;
+	}
+}
+
+.panel-calendar {
+	border-radius: 0;
+	border-right: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+
+	.panel-heading {
+		border-radius: 0;
+		color: $brand-primary;
+	}
+}
+
+@media (max-width: 767px) {
+	.events-calendar {
+		padding-left: 0;
+	}
+
+	.panel-calendar {
+		border-left: 0;
+		border-bottom: 0;
+	}
+}
+
 .calendar {
 	margin-left: auto;
 	margin-right: auto;
@@ -193,7 +238,7 @@ $panel-primary-heading-bg:	$brand-primary;
 
 	&.calendar td {
 		line-height: 30px;
-		padding: 4px;
+		padding: 8px 4px;
 		width: 14%;
 	}
 }
@@ -204,7 +249,7 @@ $panel-primary-heading-bg:	$brand-primary;
 }
 
 .eventday {
-	background-color: $brand-secondary;
+	background-color: $brand-primary;
 	border-radius: 30px;
 	color: white;
 	cursor: pointer;
@@ -214,11 +259,11 @@ $panel-primary-heading-bg:	$brand-primary;
 }
 
 .today {
-	color: $brand-primary;
+	color: $brand-secondary;
 	font-weight: bold;
 
 	.eventday {
-		background-color: $brand-primary;
+		background-color: $brand-secondary;
 	}
 }
 
@@ -250,7 +295,7 @@ $panel-primary-heading-bg:	$brand-primary;
 	.map-address__inner {
 		margin: 0;
 		position: absolute;
-		top: calc(50% - 4em);
+		top: calc(50% - 5em);
 		width: 100%;
 	}
 }
