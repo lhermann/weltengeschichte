@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     clean: {
       dev: ['dev/css/fonts'],
-      build: ["build/**"],
+      build: ['build/**/*', '!build/VERSION'],
       cleanup: ['.grunt/']
     },
     copy: {
