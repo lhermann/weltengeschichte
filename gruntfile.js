@@ -82,7 +82,17 @@ module.exports = function(grunt) {
     usemin: {
       html: ['build/index.html', 'build/impressum.html', 'build/datenschutz.html'],
       css: 'build/css/**.css'
-    }
+    },
+    imagemin: {
+        compressdev: {
+          files: [{
+            expand: true,
+            cwd: 'dev/img/',
+            src: ['**/*.{png,jpg,gif}'],
+            dest: 'dev/img/'
+          }]
+        }
+      }
   });
 
   // Load the plugins
@@ -93,11 +103,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-filerev');
+  grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Tasks.
-  grunt.registerTask('dev', 'Set up dev environment', ['clean:dev', 'copy:dev', 'compass:dev']);
-  grunt.registerTask('build', 'Build the website into the build/ filder', ['clean:build', 'copy:build', 'useminPrepare', 'concat:build', 'uglify:build', 'compass:build', 'filerev', 'usemin', 'clean:cleanup']);
-  grunt.registerTask('deploy', 'Deploy the website', customDeployTask);
+  grunt.registerTask('dev',       'Set up dev environment',                   ['clean:dev', 'copy:dev', 'compass:dev']);
+  grunt.registerTask('compress',  'Compress images',                          ['newer:imagemin:compressdev']);
+  grunt.registerTask('build',     'Build the website into the build/ filder', ['clean:build', 'copy:build', 'useminPrepare', 'concat:build', 'uglify:build', 'compass:build', 'filerev', 'usemin', 'clean:cleanup']);
+  grunt.registerTask('deploy',    'Deploy the website',                       customDeployTask);
 
   function customDeployTask() {
     grunt.task.run('build');
