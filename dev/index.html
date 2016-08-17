@@ -56,7 +56,7 @@
         <section id="cover" class="cover">
             <div class="container">
 
-                <header class="main-header margin-bottom">
+                <header class="cover__header margin-bottom">
                     <img class="page-logo" src="img/logo-306.png" alt="">
                     <h1 class="page-title">Welt<span class="color-secondary">en</span>geschichte</h1>
                 </header>
@@ -87,6 +87,18 @@
             </div><!-- /.container -->
         </section><!-- /.cover -->
 
+        <nav id="navigation" class="navigation drop-shadow hidden-xs hidden-sm" role="navigation">
+            <div class="container navigation__inner">
+                <h3 class="section__heading">Springe zu:</h3>
+                <ul class="nav nav-pills">
+                    <li role="presentation"><a href="#events">Termine</a></li>
+                    <li role="presentation"><a href="#map">Veranstaltungsort</a></li>
+                    <li role="presentation"><a href="#description">Beschreibung</a></li>
+                    <li role="presentation"><a href="#speaker">Sprecher</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <section id="events" class="container-fluid events drop-shadow">
             <div class="row">
                 <div class="col-sm-12 col-md-4">
@@ -95,10 +107,10 @@
                         <!-- Content inserted via javascript -->
                     </ul>
                 </div>
-                <div class="col-sm-6 col-md-4 events-calendar">
+                <div class="col-sm-6 col-md-4 events__calendar">
                     <div class="panel panel-default panel-calendar">
                         <div class="panel-heading"><h3>September 2016</h3></div>
-                        <table class="calendar table table-bordered text-center">
+                        <table class="table table-bordered text-center table-calendar">
                             <thead>
                                 <tr class="color-subtle active">
                                     <th>So</th>
@@ -169,10 +181,10 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 events-calendar">
+                <div class="col-sm-6 col-md-4 events__calendar">
                     <div class="panel panel-default panel-calendar">
                         <div class="panel-heading"><h3>Oktober 2016</h3></div>
-                        <table class="calendar table table-bordered text-center">
+                        <table class="table table-bordered text-center table-calendar">
                             <thead>
                                 <tr class="color-subtle active">
                                     <th>So</th>
@@ -257,7 +269,7 @@
                 <div class="col-md-4 text-center">
                     <div class="map-address">
                         <div class="map-address__inner">
-                            <h3>Möchtest du live dabei sein?</h3>
+                            <h3>Möchten Sie live dabei sein?</h3>
                             <p class="lead">Federseestraße 7<br>Stuttgart-Wangen</p>
                         </div>
                     </div>
@@ -265,12 +277,12 @@
             </div>
         </section>
 
-        <section class="container-fluid description drop-shadow">
+        <section id="description" class="container-fluid description drop-shadow">
             <div class="row">
-                <div class="col-md-6 description__image">
+                <div class="col-md-6 col-paddingless description__image">
                     <img src="img/blue-earth-c.jpg">
                 </div>
-                <div class="col-md-4 margin-bottom margin-top description__text">
+                <div class="col-md-4 margin-bottom margin-top description__text container-fluid__text">
                           <h3>Beschreibung</h3>
                           <p>Die größte Geschichte aller Zeiten ist die Geschichte unserer Existenz. Es ist ein Epos voller Liebe und Hass, Aufstieg und Niedergang, voller unerwarteter Wendungen und dramatischer Ereignisse. Es ist die Geschichte einer Welt, die innerlich zerrissen ist, zwischen der Verzweiflung der Gegenwart und der inneren Überzeugung, dass es Gutes geben muss. Doch das ist nicht alles. 66 antike Bücher offenbaren eine völlig neue Perspektive: Wir alle sind Teil einer noch größeren Geschichte:</p>
                           <p>Tauchen sie ein in eine unvergessliche Erzählung dieser uralten Chroniken bis in unsere heutige Zeit. Lernen Sie in 27 spannenden Episoden die älteste und bis heute überzeugendste Deutung der gesamten Weltgeschichte kennen.</p>
@@ -279,9 +291,25 @@
             </div>
         </section>
 
-        <footer id="footer" class="main-footer">
+        <section id="speaker" class="container-fluid speaker">
+            <div class="row">
+                <div class="col-md-4 col-md-push-7 col-md-offset-1 col-paddingless text-right speaker__image">
+                    <img src="img/christopher-kramp.jpg">
+                </div>
+                <div class="col-md-6 col-md-pull-5 col-md-offset-1 margin-bottom margin-top speaker__text container-fluid__text">
+                    <h3>Sprecher</h3>
+                    <p>Christopher Kramp (28) ist gebürtiger Rostocker und Wahl–Stuttgarter. Er studierte zunächst Orchesterdirigent an der Musikhochschule Stuttgart und entdeckte dann seine Begeisterung für herausfordernde und aktuelle Botschaften zum Zeitgeschehen. Diese Themen basieren auf einem jahrelangen, gründlichen Studium faszinierender, oftmals unbekannter biblischer Geschichtsschreibung und Prophezeiungen und ihrer historischen Hintergründe, das er 2010 durch einen längeren Studienaufenthalt in Birmingham/England schwerpunktmäßig vertiefte.</p>
+                    <p>Seine Präsentationen zeichnen sich durch Lebendigkeit und Verständlichkeit aus und haben vielen Menschen geholfen, Hoffnung und Lebenssinn zu finden.</p>
+                    <p>Vorträge und Seminare führten ihn bisher in alle Teile Deutschlands, nach China, Malaysia, Ghana, Polen, England, Italien, Norwegen sowie in die USA.</p>
+                    <p>Ein besonderer Schwerpunkt seiner Arbeit ist das Internet.</p>
+                    <p>Er ist Hauptsprecher und Vorsitzender von Joel Media Ministry e.V. und ist glücklich verheiratet mit Rabea.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="footer drop-shadow">
             <div class="container">
-                <ul class="footer-nav">
+                <ul class="footer__nav">
                     <li><a href="impressum.html">Impressum</a></li>
                     <li><a href="datenschutz.html">Datenschutzerkl&auml;rung</a></li>
                 </ul>
