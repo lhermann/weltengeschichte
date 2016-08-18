@@ -111,22 +111,23 @@ $(document).ready(function() {
     /*
      * Populate Themenlist
      */
-    var tl = $('#themenlist');
+    var tl = $('#eventslist');
     var counter = 0;
+    var maxEpisodes = 6;
     for (var i = nextEventIndex ? nextEventIndex : 0 ; i < events.length; ++i) {
 
         // Limit number of events listed
         counter++;
-        if(counter > 5) {
-            if(counter === 6) $(tl).append( $('<li class="list-group-item">...</li>') );
+        if(counter > maxEpisodes) {
+            if(counter === maxEpisodes+1) $(tl).append( $('<li class="">...</li>') );
             continue;
         }
 
         // Generate list item
         var e = events[i];
         var days = ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."];
-        var time = '<span class="badge">' + days[e.time.getDay()] + ' ' + e.time.getDate() + '.' + (e.time.getMonth()+1) + '. &bull; ' + e.time.getHours() + ":" + ("0" + e.time.getMinutes()).slice(-2) + '</span>';
-        var li = $( '<li class="list-group-item">' + time + (i+1) + '. ' + e.title + '</li>' );
+        var time = '<span class="badge">' + days[e.time.getDay()] + ' ' + e.time.getDate() + '.' + (e.time.getMonth()+1) + '. &bull; ' + e.time.getHours() + ":" + ("0" + e.time.getMinutes()).slice(-2) + ' &bull; 90min</span>';
+        var li = $( '<li class="">' + time + (i+1) + '. ' + e.title + '</li>' );
         $(tl).append(li);
     }
 

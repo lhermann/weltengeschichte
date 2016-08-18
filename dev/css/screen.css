@@ -5213,23 +5213,37 @@ button.list-group-item-danger.active:focus {
 }
 
 /* line 249, ../scss/screen.scss */
+.events__list {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 253, ../scss/screen.scss */
+.events__list > li {
+  padding: .4em;
+}
+/* line 257, ../scss/screen.scss */
+.events__list .badge {
+  float: right;
+}
+
+/* line 262, ../scss/screen.scss */
 .events__calendar {
   padding: 0;
 }
 @media (min-width: 992px) {
-  /* line 253, ../scss/screen.scss */
+  /* line 266, ../scss/screen.scss */
   .events__calendar:nth-last-child(2) {
     padding-left: 15px;
   }
 }
 @media (min-width: 480px) and (max-width: 991px) {
-  /* line 259, ../scss/screen.scss */
+  /* line 272, ../scss/screen.scss */
   .events__calendar:last-child .panel-calendar {
     border-left: 1px solid #ddd;
   }
 }
 
-/* line 265, ../scss/screen.scss */
+/* line 278, ../scss/screen.scss */
 .panel-calendar {
   border: 0;
   border-left: 1px solid #e24412;
@@ -5238,31 +5252,31 @@ button.list-group-item-danger.active:focus {
   margin-bottom: 0;
 }
 @media (min-width: 480px) and (max-width: 991px) {
-  /* line 265, ../scss/screen.scss */
+  /* line 278, ../scss/screen.scss */
   .panel-calendar {
     border: 0;
     border-top: 1px solid #e24412;
   }
 }
 @media (max-width: 767px) {
-  /* line 265, ../scss/screen.scss */
+  /* line 278, ../scss/screen.scss */
   .panel-calendar {
     border: 0;
     border-top: 1px solid #e24412;
   }
 }
-/* line 282, ../scss/screen.scss */
+/* line 295, ../scss/screen.scss */
 .panel-calendar .panel-heading {
   border-radius: 0;
   color: #e24412;
 }
-/* line 286, ../scss/screen.scss */
+/* line 299, ../scss/screen.scss */
 .panel-calendar .panel-heading > h3 {
   font-size: 1.2em;
   margin: 0;
 }
 
-/* line 293, ../scss/screen.scss */
+/* line 306, ../scss/screen.scss */
 .eventday {
   background-color: #e24412;
   border-radius: 30px;
@@ -5273,12 +5287,12 @@ button.list-group-item-danger.active:focus {
   width: 30px;
 }
 
-/* line 303, ../scss/screen.scss */
+/* line 316, ../scss/screen.scss */
 .today {
   color: #1f2d3e;
   font-weight: bold;
 }
-/* line 307, ../scss/screen.scss */
+/* line 320, ../scss/screen.scss */
 .today .eventday {
   background-color: #1f2d3e;
 }
@@ -5286,47 +5300,47 @@ button.list-group-item-danger.active:focus {
 /*
  * Map
  */
-/* line 317, ../scss/screen.scss */
+/* line 330, ../scss/screen.scss */
 .map {
   background-color: #f5f5f5;
 }
-/* line 320, ../scss/screen.scss */
+/* line 333, ../scss/screen.scss */
 .map > .row > div {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 326, ../scss/screen.scss */
+/* line 339, ../scss/screen.scss */
 .embed-responsive-map {
   padding-bottom: 50%;
 }
 @media (min-width: 480px) and (max-width: 991px) {
-  /* line 326, ../scss/screen.scss */
+  /* line 339, ../scss/screen.scss */
   .embed-responsive-map {
     padding-bottom: 40%;
   }
 }
 @media (max-width: 767px) {
-  /* line 326, ../scss/screen.scss */
+  /* line 339, ../scss/screen.scss */
   .embed-responsive-map {
     padding-bottom: 60%;
   }
 }
 
-/* line 338, ../scss/screen.scss */
+/* line 351, ../scss/screen.scss */
 .map-address__inner {
   margin: 2em 0;
 }
 
 @media (min-width: 992px) {
-  /* line 343, ../scss/screen.scss */
+  /* line 356, ../scss/screen.scss */
   .map-address {
     border-top: 0;
     padding-top: 100%;
     position: relative;
   }
 
-  /* line 349, ../scss/screen.scss */
+  /* line 362, ../scss/screen.scss */
   .map-address__inner {
     margin: 0;
     position: absolute;
@@ -5337,7 +5351,7 @@ button.list-group-item-danger.active:focus {
 /*
  * Description
  */
-/* line 363, ../scss/screen.scss */
+/* line 376, ../scss/screen.scss */
 .description {
   background-color: #000;
   color: white;
@@ -5346,32 +5360,32 @@ button.list-group-item-danger.active:focus {
 /*
  * Speaker
  */
-/* line 374, ../scss/screen.scss */
+/* line 387, ../scss/screen.scss */
 .speaker {
   background: #436f94;
   color: white;
 }
 
 @media (min-width: 992px) {
-  /* line 381, ../scss/screen.scss */
+  /* line 394, ../scss/screen.scss */
   .speaker__image > img {
     max-height: 640px;
     width: auto;
   }
 }
 @media (max-width: 991px) {
-  /* line 379, ../scss/screen.scss */
+  /* line 392, ../scss/screen.scss */
   .speaker__image {
     height: 500px;
     overflow: hidden;
   }
-  /* line 391, ../scss/screen.scss */
+  /* line 404, ../scss/screen.scss */
   .speaker__image > img {
     margin-top: -20%;
   }
 }
 @media (max-width: 767px) {
-  /* line 379, ../scss/screen.scss */
+  /* line 392, ../scss/screen.scss */
   .speaker__image {
     height: 360px;
   }
@@ -5380,23 +5394,23 @@ button.list-group-item-danger.active:focus {
 /*
  * Footer
  */
-/* line 406, ../scss/screen.scss */
+/* line 419, ../scss/screen.scss */
 .footer {
   background-color: #f5f5f5;
   padding-bottom: 2em;
   padding-top: 2em;
 }
 
-/* line 412, ../scss/screen.scss */
+/* line 425, ../scss/screen.scss */
 .footer__nav {
   list-style: none;
   margin: 0;
 }
-/* line 416, ../scss/screen.scss */
+/* line 429, ../scss/screen.scss */
 .footer__nav > li {
   display: inline-block;
 }
-/* line 420, ../scss/screen.scss */
+/* line 433, ../scss/screen.scss */
 .footer__nav > li + li::before {
   color: #ddd;
   content: '/\00a0';
@@ -6079,25 +6093,25 @@ button.list-group-item-danger.active:focus {
     opacity: 0;
   }
 }
-/* line 444, ../scss/screen.scss */
+/* line 457, ../scss/screen.scss */
 .live-episode .episode {
   font-size: 2.2em;
 }
 
 @media (max-width: 767px) {
-  /* line 450, ../scss/screen.scss */
+  /* line 463, ../scss/screen.scss */
   .live-episode .episode {
     font-size: 1.5em;
   }
 }
-/* line 455, ../scss/screen.scss */
+/* line 468, ../scss/screen.scss */
 .countdown__inner {
   display: inline-block;
   margin: 3em 0 0;
   width: auto;
 }
 
-/* line 463, ../scss/screen.scss */
+/* line 476, ../scss/screen.scss */
 .flip-clock-divider .flip-clock-label {
   font-size: 1.5em;
   left: 20px;
@@ -6105,13 +6119,13 @@ button.list-group-item-danger.active:focus {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   width: 140px;
 }
-/* line 471, ../scss/screen.scss */
+/* line 484, ../scss/screen.scss */
 .flip-clock-divider.days .flip-clock-label {
   left: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 478, ../scss/screen.scss */
+  /* line 491, ../scss/screen.scss */
   .flip-clock-wrapper ul {
     border-radius: 4px;
     height: 40px;
@@ -6119,39 +6133,39 @@ button.list-group-item-danger.active:focus {
     padding: 0;
     width: 28px;
   }
-  /* line 485, ../scss/screen.scss */
+  /* line 498, ../scss/screen.scss */
   .flip-clock-wrapper ul .up::after {
     top: 19px !important;
   }
-  /* line 489, ../scss/screen.scss */
+  /* line 502, ../scss/screen.scss */
   .flip-clock-wrapper ul .inn {
     font-size: 30px !important;
     line-height: 38px;
   }
 
-  /* line 495, ../scss/screen.scss */
+  /* line 508, ../scss/screen.scss */
   .flip-clock-divider {
     height: 44px;
     width: 10px;
   }
-  /* line 499, ../scss/screen.scss */
+  /* line 512, ../scss/screen.scss */
   .flip-clock-divider .flip-clock-label {
     font-size: 1em;
     left: 10px;
     width: 64px;
   }
 
-  /* line 506, ../scss/screen.scss */
+  /* line 519, ../scss/screen.scss */
   .flip-clock-dot {
     height: 6px;
     left: 2px;
     width: 6px;
   }
-  /* line 511, ../scss/screen.scss */
+  /* line 524, ../scss/screen.scss */
   .flip-clock-dot.top {
     top: 12px;
   }
-  /* line 512, ../scss/screen.scss */
+  /* line 525, ../scss/screen.scss */
   .flip-clock-dot.bottom {
     bottom: 12px;
   }

@@ -246,6 +246,19 @@ $description-bg: $bg-subtle;
 	}
 }
 
+.events__list {
+	list-style: none;
+	padding-left: 0;
+
+	> li {
+		padding: .4em;
+	}
+
+	.badge {
+		float: right;
+	}
+}
+
 .events__calendar {
 	padding: 0;
 
