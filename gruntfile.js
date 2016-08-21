@@ -69,6 +69,7 @@ module.exports = function(grunt) {
         src: [
           'build/img/*.{jpg,jpeg,gif,png,webp}',
           '!build/img/weltengeschichte-preview.jpg',
+          '!build/img/weltengeschichte-video-preview.jpg',
           'build/css/*.css'
         ]
       }
