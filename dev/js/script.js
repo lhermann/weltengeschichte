@@ -1,8 +1,17 @@
 $(document).ready(function() {
     /*
+     * Import and parse json
+     */
+    var events = myjson["events"];
+    for (var i = 0; i < events.length; ++i) {
+        events[i].time = new Date(events[i].time);
+    }
+    console.log( events );
+
+
+    /*
      * Reused variables
      */
-    // var now = new Date();
     var now = getNow();
 
     function getNow() {
