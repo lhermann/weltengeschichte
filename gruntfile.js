@@ -21,12 +21,6 @@ module.exports = function(grunt) {
 				src: ['*', 'css/fonts/**', 'img/**'],
 				dest: 'build/',
 				filter: 'isFile'
-			},
-			deploy: {
-				expand: true,
-				cwd: 'build',
-				src: '**',
-				dest: '../weltengeschichte.de/test/'
 			}
 		},
 		concat: {
@@ -118,11 +112,12 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev',       'Set up dev environment',                   ['clean:dev', 'copy:dev', 'compass:dev', 'json']);
 	grunt.registerTask('compress',  'Compress images',                          ['newer:imagemin:compressdev']);
 	grunt.registerTask('build',     'Build the website into the build/ filder', ['clean:build', 'copy:build', 'useminPrepare', 'json', 'concat:build', 'uglify:build', 'compass:build', 'filerev', 'usemin', 'clean:cleanup']);
-	grunt.registerTask('deploy',    'Deploy the website',                       customDeployTask);
+	grunt.registerTask('js',     	'Just update weltengeschichte.min.js', 		['concat:build', 'uglify:build']);
+	// grunt.registerTask('deploy',    'Deploy the website',                       customDeployTask);
 
-	function customDeployTask() {
-		grunt.task.run('build');
-		grunt.task.run('copy:deploy');
-	}
+	// function customDeployTask() {
+	// 	grunt.task.run('build');
+	// 	grunt.task.run('copy:deploy');
+	// }
 
 };
