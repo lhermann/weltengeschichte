@@ -1,13 +1,25 @@
 $(document).ready(function() {
     /*
+     * Import and parse json
+     */
+    var events = myjson["events"];
+    for (var i = 0; i < events.length; ++i) {
+        events[i].time = new Date(events[i].time);
+    }
+
+
+    /*
      * Reused variables
      */
-    // var now = new Date();
     var now = getNow();
 
     function getNow() {
         return new Date();
         // return new Date(2016, 8, 23, 18, 59, 53);
+    }
+
+    if( typeof on_air === 'undefined' ) {
+        on_air = false;
     }
 
 
@@ -19,17 +31,22 @@ $(document).ready(function() {
         activeEvent,
         activeEventIndex;
 
-    updateEventVars(now);
+    updateEventVars(getNow());
     function updateEventVars(now) {
-        var nowLess90Min = new Date(now.getTime()-(90*60*1000));
+        var ninetyMinFuture = new Date(now.getTime()-(90*60*1000));
+        var oneSecPast = new Date(now.getTime()+(1*1000));
 
         for (var i = 0; i < events.length; ++i) {
-            if(events[i].time < now && events[i].time > nowLess90Min) {
+            if(events[i].time < oneSecPast && events[i].time > ninetyMinFuture) {
                 activeEvent = events[i];
                 activeEventIndex = i;
                 continue;
             } else if(events[i].time < now) {
                 continue;
+            } else if(on_air && !activeEvent) {
+                activeEvent = events[i];
+                activeEventIndex = i;
+                break;
             } else {
                 nextEvent = events[i];
                 nextEventIndex = i;
@@ -52,6 +69,7 @@ $(document).ready(function() {
                 setTimeout(function(){
                     reinitializeAppropriateDisplay()
                 }, 1100);
+                showReloadButton();
             }
         }
     });
@@ -94,9 +112,15 @@ $(document).ready(function() {
      * Recalculate present time and reinitialize appropriate display
      */
     function reinitializeAppropriateDisplay() {
-        now = getNow();
-        updateEventVars(now);
+        updateEventVars(getNow());
         displayOnPage();
+    }
+
+    /*
+     * Show the reload button
+     */
+    function showReloadButton() {
+        $('#reloadButton').removeClass('hidden');
     }
 
     /*
@@ -105,6 +129,22 @@ $(document).ready(function() {
     setInterval(function() {
         reinitializeAppropriateDisplay()
     }, 5*60*1000);
+
+    /*
+     * Do an AJAX call (every minutes) for trigger.txt and show the reload button if it returns '1'
+     */
+    setInterval(function() {
+
+        $.ajax({
+            url: "/trigger.txt?" + (Math.floor(Math.random()*90000) + 10000)
+        }).done(function( data ) {
+            if ( data == 1 ) {
+                on_air = true;
+                showReloadButton()
+            }
+        });
+
+    }, 60*1000);
 
 
 

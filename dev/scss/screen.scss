@@ -138,6 +138,7 @@ img {
  */
 
 .cover {
+	position: relative;
 	background-image: url('../img/bg.jpg');
 	background-size: 50%;
 	box-shadow: 0 40px 40px -40px $shadow-color inset;
@@ -157,6 +158,21 @@ img {
 		text-align: center;
 	}
 }
+
+	.cover__overlay {
+		background-color: rgba(0, 0, 0, .5);
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+
+		.cover__overlay-inner {
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			width: 100%;
+		}
 
 .page-logo {
 	height: 80px;
