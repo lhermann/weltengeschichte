@@ -42,7 +42,7 @@ $icon-font-path: 'fonts/';
 // @import 'bootstrap/code';
 @import 'bootstrap/grid';
 @import 'bootstrap/tables';
-// @import 'bootstrap/forms';
+@import 'bootstrap/forms';
 @import 'bootstrap/buttons';
 
 img {
@@ -102,7 +102,7 @@ img {
  */
 // @import 'bootstrap/component-animations';
 // @import 'bootstrap/dropdowns';
-// @import 'bootstrap/button-groups';
+@import 'bootstrap/button-groups';
 // @import 'bootstrap/input-groups';
 @import 'bootstrap/navs';
 // @import 'bootstrap/navbar';
@@ -122,7 +122,7 @@ img {
 @import 'bootstrap/panels';
 @import 'bootstrap/responsive-embed';
 // @import 'bootstrap/wells';
-// @import 'bootstrap/close';
+@import 'bootstrap/close';
 
 
 /*
@@ -130,6 +130,25 @@ img {
  */
 .video-container {
 	box-shadow: 0 0 20px $shadow-color;
+}
+
+/*
+ * btn-group
+ */
+.btn-group .btn-default.active {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+/*
+ * jquery-validate-plugin
+ */
+.error {
+    color: red;
+}
+.g-recaptcha {
+    padding-bottom: 20px;
 }
 
 
@@ -461,7 +480,7 @@ $speaker-bg: #436f94;
 /**
  * Components w/ JavaScript
  */
-// @import 'bootstrap/modals';
+@import 'bootstrap/modals';
 @import 'bootstrap/tooltip';
 // @import 'bootstrap/popovers';
 // @import 'bootstrap/carousel';

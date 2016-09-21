@@ -29,7 +29,10 @@ module.exports = function(grunt) {
 							'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
 							'node_modules/flipclock/compiled/flipclock.js',
 							'dev/js/eventsobject.js',
-							'dev/js/script.js'
+							'dev/js/script.js',
+                            'dev/js/jquery.validate.min.js',
+                            'dev/js/messages_de.min.js',
+                            'dev/js/ajaxform.js'
 						],
 						dest: '.grunt/js/<%= pkg.name %>.js',
 					},
@@ -40,7 +43,7 @@ module.exports = function(grunt) {
 			},
 			build: {
 				src: '.grunt/js/<%= pkg.name %>.js',
-				dest: 'build/js/<%= pkg.name %>.2.min.js'
+				dest: 'build/js/<%= pkg.name %>.min.js'
 			}
 		},
 		compass: {
@@ -64,7 +67,8 @@ module.exports = function(grunt) {
 					'build/img/*.{jpg,jpeg,gif,png,webp}',
 					'!build/img/weltengeschichte-preview.jpg',
 					'!build/img/weltengeschichte-video-preview.jpg',
-					'build/css/*.css'
+					'build/css/*.css',
+                    'build/js/weltengeschichte.min.js'
 				]
 			}
 		},
@@ -75,7 +79,7 @@ module.exports = function(grunt) {
 			}
 		},
 		usemin: {
-			html: ['build/teaser.html', 'build/impressum.html', 'build/datenschutz.html', 'build/partial-*'],
+			html: ['build/teaser.html', 'build/live.html', 'build/impressum.html', 'build/datenschutz.html', 'build/partial-*'],
 			css: 'build/css/**.css'
 		},
 		imagemin: {
@@ -112,7 +116,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev',       'Set up dev environment',                   ['clean:dev', 'copy:dev', 'compass:dev', 'json']);
 	grunt.registerTask('compress',  'Compress images',                          ['newer:imagemin:compressdev']);
 	grunt.registerTask('build',     'Build the website into the build/ filder', ['clean:build', 'copy:build', 'useminPrepare', 'json', 'concat:build', 'uglify:build', 'compass:build', 'filerev', 'usemin', 'clean:cleanup']);
-	grunt.registerTask('js',     	'Just update weltengeschichte.2.min.js', 		['concat:build', 'uglify:build']);
+	grunt.registerTask('js',     	'Just update weltengeschichte.2.min.js', 	['concat:build', 'uglify:build']);
 	// grunt.registerTask('deploy',    'Deploy the website',                       customDeployTask);
 
 	// function customDeployTask() {

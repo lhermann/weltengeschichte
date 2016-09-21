@@ -23,8 +23,56 @@
             <div class="col-md-8 col-md-offset-2 hero__item">
                 <h1 >Das größte Epos aller Zeiten – unsere Geschichte</h1>
                 <p class="lead">Lernen Sie in 27 Episoden die älteste und bis heute überzeugendste Deutung der gesamten Weltgeschichte kennen.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="center-block btn btn-success btn-lg" data-toggle="modal" data-target="#feedbackModal">Fragen &amp; Feedback</button>
             </div>
         </div><!--/.row-->
 
     </div><!-- /.container -->
 </section><!-- /.cover -->
+
+<!-- Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Fragen &amp; Feedback</h4>
+            </div>
+            <div class="modal-body">
+
+                <form id="ajaxForm" action="mailer.php">
+                    <div class="form-group btn-group" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="radio" name="receiver" value="frage" id="option1" autocomplete="off" checked> Frage an den Sprecher
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="receiver" value="feedback" id="option2" autocomplete="off"> Feedback an die Technik
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" name="name" class="form-control" id="inputName" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputMessage">Nachricht</label>
+                        <textarea id="inputMessage" class="form-control" name="message" rows="10" cols="50" placeholder="Schreiben Sie uns etwas ..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="6LfjTwcUAAAAADme3nlSoAy-eL6JYZbANz0CsgZd"></div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Absenden</button>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button>
+                <button type="button" class="btn btn-primary">Absenden</button>
+            </div>
+        </div>
+    </div>
+</div>
