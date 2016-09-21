@@ -5,7 +5,7 @@
         /**
           * Get the form fields and remove whitespace.
           */
-        $receiver = $_POST["receiver"];
+        $receiver = $_POST["receiver"] == 'fragen' ? 'fragen' : 'feedback';
         $name = strip_tags(trim($_POST["name"]));
         $name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
@@ -15,20 +15,7 @@
         /**
          * Validate Captcha
          */
-        // $url = 'https://www.google.com/recaptcha/api/siteverify';
-        // $data = array('secret' => '6LfjTwcUAAAAALGPPoSmWuzinIkc9OOWvH0gqZ5u', 'response' => $captcha);
-
-        // // use key 'http' even if you send the request to https://...
-        // $options = array(
-        //     'http' => array(
-        //         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-        //         'method'  => 'POST',
-        //         'content' => http_build_query($data)
-        //     )
-        // );
-        // $context  = stream_context_create($options);
-        // $result = file_get_contents($url, false, $context);
-        $secret = '6LfjTwcUAAAAALGPPoSmWuzinIkc9OOWvH0gqZ5u';
+        $secret = '6LfaTAcUAAAAAE1w3K_rUJj4SVkeX-yXbG3yF7FI';
         $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "=&response=" . rawurlencode($captcha) . "&remoteip=" . rawurlencode($_SERVER['REMOTE_ADDR']));
 
         if ($response === FALSE) {
@@ -54,12 +41,13 @@
             exit;
         }
 
+
+
         // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "lukas.hermann@joelmediatv.de";
+        $recipient = $receiver . '@joelmediatv.de';
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = ucfirst( $receiver ) . " von $name";
 
         // Build the email content.
         $email_content = "Name: $name\n";
@@ -67,13 +55,13 @@
         $email_content .= "Message:\n$message\n";
 
         // Build the email headers.
-        $email_headers = "From: Weltengeschichte <feedback@weltengeschichte.de>";
+        $email_headers = "From: Weltengeschichte <" . $receiver . "@weltengeschichte.de>";
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            echo "Thank You! Your message has been sent.";
+            echo "Thank You! Your message has been sent to " . $receiver . "@weltengeschichte.de";
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
