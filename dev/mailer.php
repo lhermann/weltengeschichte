@@ -36,15 +36,15 @@
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Oops! There was a problem with your submission. Please complete the form and try again.";
-            print_r($response);
-            print_r($captcha_response);
+            // print_r($response);
+            // print_r($captcha_response);
             exit;
         }
 
 
 
         // Set the recipient email address.
-        $recipient = $receiver . '@joelmediatv.de';
+        $recipient = $receiver . '@weltengeschichte.de';
 
         // Set the email subject.
         $subject = ucfirst( $receiver ) . " von $name";
