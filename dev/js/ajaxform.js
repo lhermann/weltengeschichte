@@ -54,19 +54,12 @@ $(function() {
 
             });
         }
-
-        // TODO
-        // - Ajax Request
-        // - Spinner
-        // - Ajax response
     });
 
     function cleanupForm() {
-        $('#inputNmail').val('');
         $('#inputEmail').val('');
+        $('#inputName').val('');
         $('#inputMessage').val('');
         grecaptcha.reset();
     }
-
-    // TODO: The rest of the code will go here...
 });
