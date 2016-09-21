@@ -15,23 +15,26 @@
         /**
          * Validate Captcha
          */
-        $url = 'https://www.google.com/recaptcha/api/siteverify';
-        $data = array('secret' => '6LfjTwcUAAAAALGPPoSmWuzinIkc9OOWvH0gqZ5u', 'response' => $captcha);
+        // $url = 'https://www.google.com/recaptcha/api/siteverify';
+        // $data = array('secret' => '6LfjTwcUAAAAALGPPoSmWuzinIkc9OOWvH0gqZ5u', 'response' => $captcha);
 
-        // use key 'http' even if you send the request to https://...
-        $options = array(
-            'http' => array(
-                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-                'method'  => 'POST',
-                'content' => http_build_query($data)
-            )
-        );
-        $context  = stream_context_create($options);
-        $result = file_get_contents($url, false, $context);
-        if ($result === FALSE) {
+        // // use key 'http' even if you send the request to https://...
+        // $options = array(
+        //     'http' => array(
+        //         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        //         'method'  => 'POST',
+        //         'content' => http_build_query($data)
+        //     )
+        // );
+        // $context  = stream_context_create($options);
+        // $result = file_get_contents($url, false, $context);
+        $secret = '6LfjTwcUAAAAALGPPoSmWuzinIkc9OOWvH0gqZ5u';
+        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "=&response=" . rawurlencode($captcha) . "&remoteip=" . rawurlencode($_SERVER['REMOTE_ADDR']));
+
+        if ($response === FALSE) {
             $captcha_success = false;
         } else {
-            $captcha_response = json_decode($result);
+            $captcha_response = json_decode($response);
             $captcha_success = $captcha_response->success ? true : false;
         }
 
@@ -46,6 +49,8 @@
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+            print_r($response);
+            print_r($captcha_response);
             exit;
         }
 
