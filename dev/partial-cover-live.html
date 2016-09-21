@@ -41,7 +41,7 @@
             </div>
             <div class="modal-body">
 
-                <form id="ajaxForm" action="mailer.php">
+                <form class="feedback-form" id="ajaxForm" action="mailer.php">
                     <div class="form-group btn-group" data-toggle="buttons">
                         <label class="btn btn-default active">
                             <input type="radio" name="receiver" value="fragen" id="option1" autocomplete="off" checked> Frage an den Sprecher
@@ -60,18 +60,33 @@
                     </div>
                     <div class="form-group">
                         <label for="inputMessage">Nachricht</label>
-                        <textarea id="inputMessage" class="form-control" name="message" rows="10" cols="50" placeholder="Schreiben Sie uns etwas ..." required></textarea>
+                        <textarea id="inputMessage" class="form-control" name="message" rows="6" cols="50" placeholder="Schreiben Sie uns etwas ..." required></textarea>
                     </div>
                     <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6LfaTAcUAAAAAKrXmftY0FaiG8eC0nGvQrQs1oM6"></div>
                     </div>
-                    <button type="submit" class="btn btn-success">Absenden</button>
+                    <button type="submit" class="btn btn-success btn-lg">Absenden</button>
+                    <div class="spinner-div">
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 100%">
+                          </div>
+                        </div>
+                    </div>
+                    <div class="error-div">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Irgendwas stimmt nicht!</strong>
+                            <br>Haben Sie alles ausgef&uuml;llt?
+                            <br>Manchmal hilft es die Seite neu zu laden.
+                        </div>
+                    </div>
+                    <div class="success-div">
+                        <div class="alert alert-success" role="alert"><strong>Nachricht erfolgreich versendet!</strong></div>
+                    </div>
                 </form>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button>
-                <button type="button" class="btn btn-primary">Absenden</button>
             </div>
         </div>
     </div>

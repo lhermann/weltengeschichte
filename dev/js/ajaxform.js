@@ -24,26 +24,35 @@ $(function() {
 
         if( form.valid() ) {
 
+            $(form).removeClass('success error');
+            $(form).addClass('spinner');
+
             // Submit the form using AJAX.
             $.ajax({
                 type: 'POST',
                 url: $(form).attr('action'),
                 data: $(form).serialize()
             }).done(function(response) {
+
                 console.log(response);
 
-                // Make sure that the formMessages div has the 'success' class.
-                // $(formMessages).removeClass('error');
-                // $(formMessages).addClass('success');
-
-                // Set the message text.
-                // $(formMessages).text(response);
+                // Make sure that the form div has the 'success' class.
+                $(form).removeClass('spinner error');
+                $(form).addClass('success');
 
                 // Clear the form.
-                // $('#name').val('');
-                // $('#email').val('');
-                // $('#message').val('');
-            })
+                cleanupForm()
+
+            }).fail(function(data) {
+
+                // Make sure that the form div has the 'error' class.
+                $(form).removeClass('spinner success');
+                $(form).addClass('error');
+
+                // Clear the form.
+                cleanupForm()
+
+            });
         }
 
         // TODO
@@ -51,6 +60,13 @@ $(function() {
         // - Spinner
         // - Ajax response
     });
+
+    function cleanupForm() {
+        $('#inputNmail').val('');
+        $('#inputEmail').val('');
+        $('#inputMessage').val('');
+        grecaptcha.reset();
+    }
 
     // TODO: The rest of the code will go here...
 });

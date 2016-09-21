@@ -5262,6 +5262,211 @@ a.badge:hover, a.badge:focus {
   cursor: pointer;
 }
 
+/* line 9, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+/* line 16, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+/* line 23, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert .alert-link {
+  font-weight: bold;
+}
+/* line 28, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert > p,
+.alert > ul {
+  margin-bottom: 0;
+}
+/* line 33, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert > p + p {
+  margin-top: 5px;
+}
+
+/* line 42, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px;
+}
+/* line 47, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-dismissable .close,
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+
+/* line 59, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+/* line 8, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.alert-success hr {
+  border-top-color: #c9e2b3;
+}
+/* line 11, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.alert-success .alert-link {
+  color: #2b542c;
+}
+
+/* line 63, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+/* line 8, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.alert-info hr {
+  border-top-color: #a6e1ec;
+}
+/* line 11, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.alert-info .alert-link {
+  color: #245269;
+}
+
+/* line 67, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+/* line 8, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.alert-warning hr {
+  border-top-color: #f7e1b5;
+}
+/* line 11, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.alert-warning .alert-link {
+  color: #66512c;
+}
+
+/* line 71, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+/* line 8, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.alert-danger hr {
+  border-top-color: #e4b9c0;
+}
+/* line 11, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+.alert-danger .alert-link {
+  color: #843534;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+/* line 26, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
+.progress {
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* line 36, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
+.progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+
+/* line 54, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+
+/* line 64, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
+.progress.active .progress-bar,
+.progress-bar.active {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+
+/* line 73, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
+.progress-bar-success {
+  background-color: #5cb85c;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_progress-bar.scss */
+.progress-striped .progress-bar-success {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 77, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
+.progress-bar-info {
+  background-color: #5bc0de;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_progress-bar.scss */
+.progress-striped .progress-bar-info {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 81, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
+.progress-bar-warning {
+  background-color: #f0ad4e;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_progress-bar.scss */
+.progress-striped .progress-bar-warning {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 85, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
+.progress-bar-danger {
+  background-color: #d9534f;
+}
+/* line 7, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_progress-bar.scss */
+.progress-striped .progress-bar-danger {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
 /* line 10, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_list-group.scss */
 .list-group {
   margin-bottom: 20px;
@@ -6025,9 +6230,46 @@ button.close {
 }
 
 /*
+ * Feedback Form
+ */
+/* line 157, ../scss/screen.scss */
+.feedback-from {
+  position: relative;
+}
+
+/* line 161, ../scss/screen.scss */
+.spinner-div {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50% 20%;
+}
+
+/* line 173, ../scss/screen.scss */
+.error-div,
+.success-div {
+  display: none;
+  padding: 20px 30px 0 30px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* line 181, ../scss/screen.scss */
+.spinner .spinner-div,
+.error .error-div,
+.success .success-div {
+  display: block;
+}
+
+/*
  * Cover
  */
-/* line 159, ../scss/screen.scss */
+/* line 192, ../scss/screen.scss */
 .cover {
   position: relative;
   background-image: url("../img/bg.jpg");
@@ -6035,25 +6277,25 @@ button.close {
   box-shadow: 0 40px 40px -40px rgba(0, 0, 0, 0.3) inset;
   padding: 1px 0;
 }
-/* line 166, ../scss/screen.scss */
+/* line 199, ../scss/screen.scss */
 .cover .lead {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 171, ../scss/screen.scss */
+/* line 204, ../scss/screen.scss */
 .cover__header {
   margin-bottom: 2em;
   margin-top: 2em;
   text-align: left;
 }
 @media (max-width: 991px) {
-  /* line 171, ../scss/screen.scss */
+  /* line 204, ../scss/screen.scss */
   .cover__header {
     text-align: center;
   }
 }
 
-/* line 181, ../scss/screen.scss */
+/* line 214, ../scss/screen.scss */
 .cover__overlay {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -6062,7 +6304,7 @@ button.close {
   bottom: 0;
 }
 
-/* line 189, ../scss/screen.scss */
+/* line 222, ../scss/screen.scss */
 .cover__overlay-inner {
   position: absolute;
   text-align: center;
@@ -6070,13 +6312,13 @@ button.close {
   width: 100%;
 }
 
-/* line 196, ../scss/screen.scss */
+/* line 229, ../scss/screen.scss */
 .page-logo {
   height: 80px;
   width: auto;
 }
 @media (min-width: 992px) {
-  /* line 196, ../scss/screen.scss */
+  /* line 229, ../scss/screen.scss */
   .page-logo {
     display: inline;
     margin-right: 1em;
@@ -6084,7 +6326,7 @@ button.close {
   }
 }
 
-/* line 207, ../scss/screen.scss */
+/* line 240, ../scss/screen.scss */
 .page-title {
   color: #e24412;
   font-family: "Times New Roman", Times, serif;
@@ -6093,7 +6335,7 @@ button.close {
   text-transform: uppercase;
 }
 @media (min-width: 992px) {
-  /* line 207, ../scss/screen.scss */
+  /* line 240, ../scss/screen.scss */
   .page-title {
     display: inline;
     font-size: 3em;
@@ -6101,13 +6343,13 @@ button.close {
   }
 }
 
-/* line 222, ../scss/screen.scss */
+/* line 255, ../scss/screen.scss */
 .hero .hero__item {
   padding-left: 30px;
   padding-right: 30px;
 }
 @media (max-width: 991px) {
-  /* line 221, ../scss/screen.scss */
+  /* line 254, ../scss/screen.scss */
   .hero {
     font-size: 2em;
     margin-top: 0;
@@ -6118,24 +6360,24 @@ button.close {
 /*
  * Navigation
  */
-/* line 240, ../scss/screen.scss */
+/* line 273, ../scss/screen.scss */
 .navigation {
   background-color: #f5f5f5;
   z-index: 0;
 }
 
-/* line 247, ../scss/screen.scss */
+/* line 280, ../scss/screen.scss */
 .navigation__inner > * {
   display: inline-block;
   float: left;
 }
-/* line 252, ../scss/screen.scss */
+/* line 285, ../scss/screen.scss */
 .navigation__inner .section__heading {
   font-size: 1em;
   line-height: 46px;
   margin: 0 12px;
 }
-/* line 258, ../scss/screen.scss */
+/* line 291, ../scss/screen.scss */
 .navigation__inner .nav {
   padding: 5px;
 }
@@ -6143,60 +6385,60 @@ button.close {
 /*
  * Events
  */
-/* line 267, ../scss/screen.scss */
+/* line 300, ../scss/screen.scss */
 .events {
   background-color: #f5f5f5;
 }
 
-/* line 271, ../scss/screen.scss */
+/* line 304, ../scss/screen.scss */
 .table-calendar {
   margin: 0;
   max-width: 101%;
   width: 101%;
 }
-/* line 276, ../scss/screen.scss */
+/* line 309, ../scss/screen.scss */
 .table-calendar th {
   text-align: center;
 }
-/* line 280, ../scss/screen.scss */
+/* line 313, ../scss/screen.scss */
 .table-calendar.table-calendar td {
   line-height: 30px;
   padding: 8px 4px;
   width: 14%;
 }
 
-/* line 287, ../scss/screen.scss */
+/* line 320, ../scss/screen.scss */
 .events__list {
   list-style: none;
   padding-left: 0;
 }
-/* line 291, ../scss/screen.scss */
+/* line 324, ../scss/screen.scss */
 .events__list > li {
   padding: .4em;
 }
-/* line 295, ../scss/screen.scss */
+/* line 328, ../scss/screen.scss */
 .events__list .badge {
   float: right;
 }
 
-/* line 300, ../scss/screen.scss */
+/* line 333, ../scss/screen.scss */
 .events__calendar {
   padding: 0;
 }
 @media (min-width: 992px) {
-  /* line 304, ../scss/screen.scss */
+  /* line 337, ../scss/screen.scss */
   .events__calendar:nth-last-child(2) {
     padding-left: 15px;
   }
 }
 @media (min-width: 480px) and (max-width: 991px) {
-  /* line 310, ../scss/screen.scss */
+  /* line 343, ../scss/screen.scss */
   .events__calendar:last-child .panel-calendar {
     border-left: 1px solid #ddd;
   }
 }
 
-/* line 316, ../scss/screen.scss */
+/* line 349, ../scss/screen.scss */
 .panel-calendar {
   border: 0;
   border-left: 1px solid #e24412;
@@ -6205,31 +6447,31 @@ button.close {
   margin-bottom: 0;
 }
 @media (min-width: 480px) and (max-width: 991px) {
-  /* line 316, ../scss/screen.scss */
+  /* line 349, ../scss/screen.scss */
   .panel-calendar {
     border: 0;
     border-top: 1px solid #e24412;
   }
 }
 @media (max-width: 767px) {
-  /* line 316, ../scss/screen.scss */
+  /* line 349, ../scss/screen.scss */
   .panel-calendar {
     border: 0;
     border-top: 1px solid #e24412;
   }
 }
-/* line 333, ../scss/screen.scss */
+/* line 366, ../scss/screen.scss */
 .panel-calendar .panel-heading {
   border-radius: 0;
   color: #e24412;
 }
-/* line 337, ../scss/screen.scss */
+/* line 370, ../scss/screen.scss */
 .panel-calendar .panel-heading > h3 {
   font-size: 1.2em;
   margin: 0;
 }
 
-/* line 344, ../scss/screen.scss */
+/* line 377, ../scss/screen.scss */
 .eventday {
   background-color: #e24412;
   border-radius: 30px;
@@ -6240,12 +6482,12 @@ button.close {
   width: 30px;
 }
 
-/* line 354, ../scss/screen.scss */
+/* line 387, ../scss/screen.scss */
 .today {
   color: #1f2d3e;
   font-weight: bold;
 }
-/* line 358, ../scss/screen.scss */
+/* line 391, ../scss/screen.scss */
 .today .eventday {
   background-color: #1f2d3e;
 }
@@ -6253,47 +6495,47 @@ button.close {
 /*
  * Map
  */
-/* line 368, ../scss/screen.scss */
+/* line 401, ../scss/screen.scss */
 .map {
   background-color: #f5f5f5;
 }
-/* line 371, ../scss/screen.scss */
+/* line 404, ../scss/screen.scss */
 .map > .row > div {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 377, ../scss/screen.scss */
+/* line 410, ../scss/screen.scss */
 .embed-responsive-map {
   padding-bottom: 50%;
 }
 @media (min-width: 480px) and (max-width: 991px) {
-  /* line 377, ../scss/screen.scss */
+  /* line 410, ../scss/screen.scss */
   .embed-responsive-map {
     padding-bottom: 40%;
   }
 }
 @media (max-width: 767px) {
-  /* line 377, ../scss/screen.scss */
+  /* line 410, ../scss/screen.scss */
   .embed-responsive-map {
     padding-bottom: 60%;
   }
 }
 
-/* line 389, ../scss/screen.scss */
+/* line 422, ../scss/screen.scss */
 .map-address__inner {
   margin: 2em 0;
 }
 
 @media (min-width: 992px) {
-  /* line 394, ../scss/screen.scss */
+  /* line 427, ../scss/screen.scss */
   .map-address {
     border-top: 0;
     padding-top: 100%;
     position: relative;
   }
 
-  /* line 400, ../scss/screen.scss */
+  /* line 433, ../scss/screen.scss */
   .map-address__inner {
     margin: 0;
     position: absolute;
@@ -6304,7 +6546,7 @@ button.close {
 /*
  * Description
  */
-/* line 414, ../scss/screen.scss */
+/* line 447, ../scss/screen.scss */
 .description {
   background-color: #000;
   color: white;
@@ -6313,32 +6555,32 @@ button.close {
 /*
  * Speaker
  */
-/* line 425, ../scss/screen.scss */
+/* line 458, ../scss/screen.scss */
 .speaker {
   background: #436f94;
   color: white;
 }
 
 @media (min-width: 992px) {
-  /* line 432, ../scss/screen.scss */
+  /* line 465, ../scss/screen.scss */
   .speaker__image > img {
     max-height: 640px;
     width: auto;
   }
 }
 @media (max-width: 991px) {
-  /* line 430, ../scss/screen.scss */
+  /* line 463, ../scss/screen.scss */
   .speaker__image {
     height: 500px;
     overflow: hidden;
   }
-  /* line 442, ../scss/screen.scss */
+  /* line 475, ../scss/screen.scss */
   .speaker__image > img {
     margin-top: -20%;
   }
 }
 @media (max-width: 767px) {
-  /* line 430, ../scss/screen.scss */
+  /* line 463, ../scss/screen.scss */
   .speaker__image {
     height: 360px;
   }
@@ -6347,23 +6589,23 @@ button.close {
 /*
  * Footer
  */
-/* line 457, ../scss/screen.scss */
+/* line 490, ../scss/screen.scss */
 .footer {
   background-color: #f5f5f5;
   padding-bottom: 2em;
   padding-top: 2em;
 }
 
-/* line 463, ../scss/screen.scss */
+/* line 496, ../scss/screen.scss */
 .footer__nav {
   list-style: none;
   margin: 0;
 }
-/* line 467, ../scss/screen.scss */
+/* line 500, ../scss/screen.scss */
 .footer__nav > li {
   display: inline-block;
 }
-/* line 471, ../scss/screen.scss */
+/* line 504, ../scss/screen.scss */
 .footer__nav > li + li::before {
   color: #ddd;
   content: '/\00a0';
@@ -7224,25 +7466,25 @@ button.close {
     opacity: 0;
   }
 }
-/* line 495, ../scss/screen.scss */
+/* line 528, ../scss/screen.scss */
 .live-episode .episode {
   font-size: 2.2em;
 }
 
 @media (max-width: 767px) {
-  /* line 501, ../scss/screen.scss */
+  /* line 534, ../scss/screen.scss */
   .live-episode .episode {
     font-size: 1.5em;
   }
 }
-/* line 506, ../scss/screen.scss */
+/* line 539, ../scss/screen.scss */
 .countdown__inner {
   display: inline-block;
   margin: 3em 0 0;
   width: auto;
 }
 
-/* line 514, ../scss/screen.scss */
+/* line 547, ../scss/screen.scss */
 .flip-clock-divider .flip-clock-label {
   font-size: 1.5em;
   left: 20px;
@@ -7250,13 +7492,13 @@ button.close {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   width: 140px;
 }
-/* line 522, ../scss/screen.scss */
+/* line 555, ../scss/screen.scss */
 .flip-clock-divider.days .flip-clock-label {
   left: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 529, ../scss/screen.scss */
+  /* line 562, ../scss/screen.scss */
   .flip-clock-wrapper ul {
     border-radius: 4px;
     height: 40px;
@@ -7264,39 +7506,39 @@ button.close {
     padding: 0;
     width: 28px;
   }
-  /* line 536, ../scss/screen.scss */
+  /* line 569, ../scss/screen.scss */
   .flip-clock-wrapper ul .up::after {
     top: 19px !important;
   }
-  /* line 540, ../scss/screen.scss */
+  /* line 573, ../scss/screen.scss */
   .flip-clock-wrapper ul .inn {
     font-size: 30px !important;
     line-height: 38px;
   }
 
-  /* line 546, ../scss/screen.scss */
+  /* line 579, ../scss/screen.scss */
   .flip-clock-divider {
     height: 44px;
     width: 10px;
   }
-  /* line 550, ../scss/screen.scss */
+  /* line 583, ../scss/screen.scss */
   .flip-clock-divider .flip-clock-label {
     font-size: 1em;
     left: 10px;
     width: 64px;
   }
 
-  /* line 557, ../scss/screen.scss */
+  /* line 590, ../scss/screen.scss */
   .flip-clock-dot {
     height: 6px;
     left: 2px;
     width: 6px;
   }
-  /* line 562, ../scss/screen.scss */
+  /* line 595, ../scss/screen.scss */
   .flip-clock-dot.top {
     top: 12px;
   }
-  /* line 563, ../scss/screen.scss */
+  /* line 596, ../scss/screen.scss */
   .flip-clock-dot.bottom {
     bottom: 12px;
   }
