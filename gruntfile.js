@@ -79,7 +79,7 @@ module.exports = function(grunt) {
 			}
 		},
 		usemin: {
-			html: ['build/teaser.html', 'build/live.html', 'build/impressum.html', 'build/datenschutz.html', 'build/partial-*'],
+			html: ['build/*.html'],
 			css: 'build/css/**.css'
 		},
 		imagemin: {
