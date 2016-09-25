@@ -7910,3 +7910,7 @@ button.close {
     display: none !important;
   }
 }
+/* line 610, ../scss/screen.scss */
+.embed-limit-size {
+  max-width: 800px;
+}
