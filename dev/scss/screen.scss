@@ -226,6 +226,12 @@ img {
 			width: 100%;
 		}
 
+.page-link {
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
 .page-logo {
 	height: 80px;
 	width: auto;
