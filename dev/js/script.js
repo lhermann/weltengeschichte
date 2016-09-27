@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /*
-     * Import and parse json
+     * Import and parse events.json
      */
     var events = myjson["events"];
     for (var i = 0; i < events.length; ++i) {
@@ -11,16 +11,42 @@ $(document).ready(function() {
     /*
      * Reused variables
      */
-    var now = getNow();
-
     function getNow() {
-        return new Date();
-        // return new Date(2016, 8, 23, 18, 59, 53);
+        // return new Date(2016, 8, 23, 18, 59, 53).getTime();
+        if(!Date.now) {
+            return new Date().getTime();
+        } else {
+            return Date.now()
+        }
     }
 
-    if( typeof on_air === 'undefined' ) {
-        on_air = false;
+    // will be filled via ajax call
+    var conf = {
+        live: (typeof onAir === 'undefined' ? false : true),
+        reload: null
     }
+
+    /*
+     * Do an AJAX call (every minutes) for trigger.txt and show the reload button if it returns '1'
+     */
+    setInterval(function() {
+
+        $.ajax({
+            url: "/conf.json?" + (Math.floor(Math.random()*90000) + 10000)
+        }).done(function( data ) {
+            if( conf === null ) {
+                // first ajax call, do nothing
+            } else if ( !conf.live && data.live ) {
+                // livestream went live -> reload button
+                showReloadButton()
+            } else if ( conf.reload !== null && conf.reload !== data.reload ) {
+                // request extraudinary reload -> reload button
+                showReloadButton()
+            }
+            conf = data;
+        });
+
+    }, 10*1000);
 
 
     /*
@@ -33,17 +59,19 @@ $(document).ready(function() {
 
     updateEventVars(getNow());
     function updateEventVars(now) {
-        var ninetyMinFuture = new Date(now.getTime()-(90*60*1000));
-        var oneSecPast = new Date(now.getTime()+(1*1000));
+        var ninetyMinFuture = new Date(now-(90*60*1000));
+        var oneSecPast = new Date(now+(1*1000));
 
         for (var i = 0; i < events.length; ++i) {
             if(events[i].time < oneSecPast && events[i].time > ninetyMinFuture) {
+                // within the first 90 minutes of an event start
                 activeEvent = events[i];
                 activeEventIndex = i;
                 continue;
-            } else if(events[i].time < now) {
+            } else if(events[i].time.getTime() < now) {
+                // past event
                 continue;
-            } else if(on_air && !activeEvent) {
+            } else if(conf.live && !activeEvent) {
                 activeEvent = events[i];
                 activeEventIndex = i;
                 break;
@@ -93,7 +121,7 @@ $(document).ready(function() {
             $('#countdown').removeClass('hidden');
 
             // Start the countdown
-            clock.setTime(Math.ceil((nextEvent.time - now) / 1000));
+            clock.setTime(Math.ceil((nextEvent.time.getTime() - getNow()) / 1000));
             clock.start();
 
         }
@@ -130,22 +158,6 @@ $(document).ready(function() {
         reinitializeAppropriateDisplay()
     }, 5*60*1000);
 
-    /*
-     * Do an AJAX call (every minutes) for trigger.txt and show the reload button if it returns '1'
-     */
-    setInterval(function() {
-
-        $.ajax({
-            url: "/trigger.txt?" + (Math.floor(Math.random()*90000) + 10000)
-        }).done(function( data ) {
-            if ( data == 1 ) {
-                on_air = true;
-                showReloadButton()
-            }
-        });
-
-    }, 60*1000);
-
 
 
     /*
@@ -175,13 +187,14 @@ $(document).ready(function() {
     /*
      * Loop through the calendar days and insert the Livestream event
      */
+    var today = new Date();
     $('#events').find('td[id]').each(function(){
         var id = $(this).attr("id");
         var calday = id.split("/");
         var caldate = new Date(2016, calday[0]-1, calday[1]);
 
         // Highlight Today
-        if( now.toDateString() === caldate.toDateString() ) {
+        if( today.toDateString() === caldate.toDateString() ) {
             $(this).addClass('today');
         }
 

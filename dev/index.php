@@ -5,9 +5,9 @@
  */
 $on_air = false;
 $events = json_decode( file_get_contents('events.json') );
-$trigger = (int) file_get_contents('trigger.txt') == 1 ? true : false;
+$conf = json_decode( file_get_contents('conf.json') );
 
-if( $trigger ) {
+if( $conf->live ) {
 	$on_air = true;
 } else {
 	foreach ($events as $i => $event) {
