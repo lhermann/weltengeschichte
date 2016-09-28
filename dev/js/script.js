@@ -20,10 +20,15 @@ $(document).ready(function() {
         }
     }
 
-    // will be filled via ajax call
-    var conf = {
-        live: (typeof onAir === 'undefined' ? false : true),
-        reload: null
+    // get the conf opbject from the html body
+    var conf;
+    if( typeof window.conf === 'undefined' ) {
+        conf = {
+            live: false,
+            reload: 123
+        }
+    } else {
+        conf = window.conf;
     }
 
     /*
@@ -39,14 +44,14 @@ $(document).ready(function() {
             } else if ( !conf.live && data.live ) {
                 // livestream went live -> reload button
                 showReloadButton()
-            } else if ( conf.reload !== null && conf.reload !== data.reload ) {
+            } else if ( conf.reload !== data.reload ) {
                 // request extraudinary reload -> reload button
                 showReloadButton()
             }
             conf = data;
         });
 
-    }, 10*1000);
+    }, 60*1000);
 
 
     /*

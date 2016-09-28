@@ -36,8 +36,10 @@ header("Expires: 0"); // Proxies.
 require('partial-head.html');
 
 if( $on_air ) {
+    print("<script>\nvar conf = {live: true, reload: ".$conf->reload."} </script>"."\n");
 	require('partial-cover-live.html');
 } else {
+    print("<script>\nconf = {live: false, reload: ".$conf->reload."}\n</script>\n");
 	require('partial-cover-teaser.html');
 }
 
