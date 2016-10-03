@@ -56,6 +56,7 @@
 
         // Build the email headers.
         $email_headers = "From: Weltengeschichte <" . $receiver . "@weltengeschichte.de>";
+        $email_headers .= "\r\n" ."Reply-To: " . $email;
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
