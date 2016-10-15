@@ -70,7 +70,7 @@ img {
 .drop-shadow {
 	background: white;
 	box-shadow: 0 0 30px $shadow-color;
-	overflow: auto; // turn off collapsing margins
+	//overflow: auto; // turn off collapsing margins (problem with scrolling)
 	position: relative;
 	z-index: 1;
 }

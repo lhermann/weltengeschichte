@@ -4647,7 +4647,6 @@ img {
 .drop-shadow {
   background: white;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  overflow: auto;
   position: relative;
   z-index: 1;
 }
@@ -7909,8 +7908,4 @@ button.close {
   .hidden-print {
     display: none !important;
   }
-}
-/* line 610, ../scss/screen.scss */
-.embed-limit-size {
-  max-width: 800px;
 }
