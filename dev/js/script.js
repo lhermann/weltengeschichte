@@ -77,8 +77,8 @@ $(document).ready(function() {
                 // past event
                 continue;
             } else if(conf.live && !activeEvent) {
-                activeEvent = events[i];
-                activeEventIndex = i;
+                activeEvent      = nextEvent      = events[i];
+                activeEventIndex = nextEventIndex = i;
                 break;
             } else {
                 nextEvent = events[i];
