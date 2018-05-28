@@ -23,22 +23,22 @@
              <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
         <![endif]-->
 
-        <!-- Piwik -->
+        <!-- Matomo -->
         <script type="text/javascript">
           var _paq = _paq || [];
-          _paq.push(['disableCookies']);
+          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+          _paq.push(["disableCookies"]);
           _paq.push(['trackPageView']);
           _paq.push(['enableLinkTracking']);
           (function() {
-            var u="//analytics.joelmediatv.de/";
+            var u="//analytics.codethink.de/";
             _paq.push(['setTrackerUrl', u+'piwik.php']);
-            _paq.push(['setSiteId', '1']);
+            _paq.push(['setSiteId', '11']);
             var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
             g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
           })();
         </script>
-        <noscript><p><img src="//analytics.joelmediatv.de/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-        <!-- End Piwik Code -->
+        <!-- End Matomo Code -->
     </head>
 
     <body>
@@ -57,10 +57,9 @@
         </section><!-- /.cover -->
 
         <main class="drop-shadow">
-            <div class="container margin-bottom text-center">
+            <div class="container text-center">
 
                 <br>
-                <a href="/" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Zur&uuml;ck zur Hauptseite</a>
 
                 <h1>Vorherige Episoden:</h1>
 
@@ -73,8 +72,14 @@
                 </div>
 
 
+                <a href="https://www.joelmediatv.de" type="button" class="btn btn-primary btn-lg">Weitere Videos auf Joel Media</a>
+
                 <br>
-                <a href="/" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Zur&uuml;ck zur Hauptseite</a>
+                <br>
+
+                <a href="/" type="button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Zur&uuml;ck zur Hauptseite</a>
+
+                <div class="margin-bottom"></div>
 
             </div><!-- /.container -->
         </main>
