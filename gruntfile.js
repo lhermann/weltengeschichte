@@ -25,13 +25,15 @@ module.exports = function(grunt) {
 		concat: {
 			build: {
 				src: [
-					"node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
-					"node_modules/flipclock/compiled/flipclock.js",
-					"dev/js/eventsobject.js",
-					"dev/js/script.js",
-					"dev/js/jquery.validate.min.js",
-					"dev/js/messages_de.min.js",
-					"dev/js/ajaxform.js"
+					"dev/js/jquery-3.3.1.slim.min.js",
+					"dev/js/spambotscare-1.0.0.js",
+					"node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"
+					// "node_modules/flipclock/compiled/flipclock.js",
+					// "dev/js/eventsobject.js",
+					// "dev/js/script.js",
+					// "dev/js/jquery.validate.min.js",
+					// "dev/js/messages_de.min.js",
+					// "dev/js/ajaxform.js"
 				],
 				dest: ".grunt/js/<%= pkg.name %>.js"
 			}
